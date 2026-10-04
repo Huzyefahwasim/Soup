@@ -80,11 +80,47 @@ class VerificationTests(unittest.TestCase):
 
     def test_prompt_cap_matches_trl_keep_start_without_scoring_prompt(self):
         class TokenizedChat:
-            def apply_chat_template(self, messages, tokenize, add_generation_prompt):
-                return [11, 12, 13, 14, 15] if add_generation_prompt else [11, 12, 13, 14, 15, 20, 21]
+            def apply_chat_template(self, messages, tokenize, add_generation_prompt=False, return_dict=True):
+                ids = [11, 12, 13, 14, 15] if add_generation_prompt else [11, 12, 13, 14, 15, 20, 21]
+                return {"input_ids": ids} if return_dict else ids
         ids, boundary = self.verify.response_tokens(TokenizedChat(), "prompt", "answer", 3, 5)
         self.assertEqual(ids, [11, 12, 13, 20, 21])
         self.assertEqual(boundary, 3)
+
+    def test_explicit_return_types_match_trl_despite_tokenizer_dictionary_default(self):
+        class DefaultDictionaryChat:
+            def __init__(self):
+                self.calls = []
+
+            def apply_chat_template(self, messages, tokenize, add_generation_prompt=False, return_dict=True):
+                self.calls.append((add_generation_prompt, return_dict))
+                ids = [11, 12, 13] if add_generation_prompt else [11, 12, 13, 20, 21]
+                return {"input_ids": ids, "attention_mask": [1] * len(ids)} if return_dict else ids
+
+        tokenizer = DefaultDictionaryChat()
+        ids, boundary = self.verify.response_tokens(tokenizer, "prompt", "answer", 256, 512)
+        self.assertEqual((ids, boundary), ([11, 12, 13, 20, 21], 3))
+        self.assertEqual(tokenizer.calls, [(True, False), (False, True)])
+
+    def test_single_batch_token_lists_are_unwrapped_like_trl(self):
+        class SingleBatchChat:
+            def apply_chat_template(self, messages, tokenize, add_generation_prompt=False, return_dict=True):
+                ids = [[11, 12, 13]] if add_generation_prompt else [[11, 12, 13, 20, 21]]
+                return {"input_ids": ids} if return_dict else ids
+
+        ids, boundary = self.verify.response_tokens(SingleBatchChat(), "prompt", "answer", 256, 512)
+        self.assertEqual((ids, boundary), ([11, 12, 13, 20, 21], 3))
+
+    def test_real_token_boundary_merge_is_still_rejected(self):
+        # Synthetic token IDs represent a prompt-final token merged with the response.
+        # They are a contract fixture, not measured Qwen tokenizer output.
+        class BoundaryMergeChat:
+            def apply_chat_template(self, messages, tokenize, add_generation_prompt=False, return_dict=True):
+                ids = [11, 12, 13] if add_generation_prompt else [11, 12, 99, 21]
+                return {"input_ids": ids} if return_dict else ids
+
+        with self.assertRaisesRegex(ValueError, "prompt prefix"):
+            self.verify.response_tokens(BoundaryMergeChat(), "prompt", "answer", 256, 512)
 
     def test_streaming_gate_catches_wrong_backward_despite_equal_forward(self):
         path = ROOT / "scripts" / "check_streaming.py"

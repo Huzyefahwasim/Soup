@@ -1,0 +1,5 @@
+* text=auto eol=lf
+artifacts/** -text
+*.safetensors -text
+*.npz -text
+*.pdf -text

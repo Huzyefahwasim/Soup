@@ -82,8 +82,13 @@ def response_tokens(tokenizer, prompt, response, max_prompt, max_length):
     """Use the same Qwen user/assistant template as conversational DPO training."""
     messages = prompt if isinstance(prompt, list) else [{"role": "user", "content": prompt}]
     answer = response if isinstance(response, list) else [{"role": "assistant", "content": response}]
-    prefix = tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True)
-    full = tokenizer.apply_chat_template(messages + answer, tokenize=True, add_generation_prompt=False)
+    # Match TRL 0.29's explicit return types; Transformers 5 defaults to a mapping.
+    prefix = tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True,
+                                           return_dict=False)
+    full = tokenizer.apply_chat_template(messages + answer, tokenize=True,
+                                         return_dict=True)["input_ids"]
+    prefix = prefix[0] if prefix and isinstance(prefix[0], list) else prefix
+    full = full[0] if full and isinstance(full[0], list) else full
     if full[:len(prefix)] != prefix:
         raise ValueError("chat tokenization does not preserve the prompt prefix")
     completion = full[len(prefix):]
