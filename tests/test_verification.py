@@ -137,6 +137,24 @@ class VerificationTests(unittest.TestCase):
             {"lora_A": np.array([1.0])}, {"lora_A": np.array([1.0]), "lora_B": np.array([0.1])},
             "float16")["optimizer_state_pass"])
 
+    def passing_probe(self):
+        return dict(forward_pass=True, backward_pass=True, loss_pass=True,
+                    reference_pass=True, all_expected_gradients=True, base_frozen=True,
+                    decoder_base_on_meta=True, optimizer_changed_parameters=True,
+                    negative_control_rejected=True, updated_parameters_finite=True,
+                    resident_optimizer_changed_parameters=True, optimizer_state_pass=True,
+                    optimizer_state_expected=True)
+
+    def test_loss_gate_vetoes_overall_probe_even_when_other_checks_pass(self):
+        result = self.passing_probe()
+        result["loss_pass"] = False
+        self.assertFalse(self.streaming().probe_pass(result))
+
+    def test_poststep_gate_vetoes_overall_probe_even_when_other_checks_pass(self):
+        result = self.passing_probe()
+        result["optimizer_state_pass"] = False
+        self.assertFalse(self.streaming().probe_pass(result))
+
 
 if __name__ == "__main__":
     unittest.main()

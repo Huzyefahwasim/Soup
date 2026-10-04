@@ -67,6 +67,14 @@ def optimizer_report(streamed, resident, dtype):
             "optimizer_state_cosine": cosine, "optimizer_state_tensors": len(streamed)}
 
 
+def probe_pass(result):
+    gates = ["forward_pass", "backward_pass", "loss_pass", "reference_pass",
+             "all_expected_gradients", "base_frozen", "decoder_base_on_meta",
+             "optimizer_changed_parameters", "negative_control_rejected", "updated_parameters_finite",
+             "resident_optimizer_changed_parameters", "optimizer_state_pass", "optimizer_state_expected"]
+    return all(result.get(key) is True for key in gates)
+
+
 def run_check(device="cuda", dtype="float16"):
     import torch
     from peft import LoraConfig, get_peft_model, get_peft_model_state_dict, set_peft_model_state_dict
@@ -181,11 +189,7 @@ def run_check(device="cuda", dtype="float16"):
                 torch.cuda.synchronize()
                 result.update(gpu=torch.cuda.get_device_name(), peak_allocated=torch.cuda.max_memory_allocated(),
                               peak_reserved=torch.cuda.max_memory_reserved())
-            gates = ["forward_pass", "backward_pass", "loss_pass", "reference_pass", "all_expected_gradients", "base_frozen",
-                     "decoder_base_on_meta", "optimizer_changed_parameters", "negative_control_rejected"]
-            gates.extend(["updated_parameters_finite", "resident_optimizer_changed_parameters",
-                          "optimizer_state_pass", "optimizer_state_expected"])
-            result["pass"] = all(result[k] for k in gates)
+            result["pass"] = probe_pass(result)
             return result
         finally:
             runtime.close()
