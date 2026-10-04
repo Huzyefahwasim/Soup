@@ -1,0 +1,9 @@
+# Keep Colab's CUDA-enabled torch (>=2.6); record the exact runtime in pip freeze.
+soup-cli[train]==0.75.2
+transformers==5.16.1
+trl==0.29.0
+peft==0.20.0
+pytest>=8,<9
+pyarrow>=20,<26
+reportlab>=4,<6
+pypdf>=5,<7

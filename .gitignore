@@ -1,0 +1,15 @@
+.venv/
+.cache/
+vendor/
+.work/
+__pycache__/
+.pytest_cache/
+output/
+*.safetensors
+*.bin
+*.pt
+*.zip
+.ipynb_checkpoints/
+hf-cache/
+model-cache/
+*.token
