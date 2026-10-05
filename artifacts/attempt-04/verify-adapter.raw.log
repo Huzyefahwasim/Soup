@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/content/submitted-source/scripts/verify_adapter.py", line 205, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/content/submitted-source/scripts/verify_adapter.py", line 194, in main
+    json.loads(Path(args.metrics_before).read_text()),
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/attempt-04/baseline.json'

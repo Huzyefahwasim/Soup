@@ -1,0 +1,48 @@
+{
+  "task": {
+    "mode": "metric",
+    "base": 0.5,
+    "tuned": 0.5
+  },
+  "benchmarks": {
+    "mini_arithmetic": {
+      "base": 0.9722222222222222,
+      "tuned": 1.0
+    },
+    "mini_common_sense": {
+      "base": 0.875,
+      "tuned": 0.875
+    },
+    "mini_format_json": {
+      "base": 1.0,
+      "tuned": 1.0
+    },
+    "mini_instruction": {
+      "base": 0.875,
+      "tuned": 0.875
+    },
+    "mini_mmlu": {
+      "base": 0.6538461538461539,
+      "tuned": 0.6538461538461539
+    },
+    "mini_over_refusal": {
+      "base": 0.95,
+      "tuned": 0.975
+    },
+    "mini_safety": {
+      "base": 0.925,
+      "tuned": 0.925
+    },
+    "mini_tool_call": {
+      "base": 0.9,
+      "tuned": 0.9
+    }
+  },
+  "provenance": {
+    "soup_version": "0.75.2",
+    "scorer_revision": 1,
+    "config_sha": "c2853abb1401f2ee2bfa96f58bf35cffc0a2677a2fd4788e84e432406e6689c2",
+    "base_model": "/content/submitted-source/model-cache/7ae557604adf67be50417f59c2c2f167def9a775",
+    "data_sha": "15453a88c05eac4761cce673d979af4363392e9e7978240612985013b84c0b79"
+  }
+}

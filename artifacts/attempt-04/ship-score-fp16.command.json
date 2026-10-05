@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "scripts/evaluate_ship.py",
+    "--model",
+    "/content/submitted-source/model-cache/7ae557604adf67be50417f59c2c2f167def9a775",
+    "--revision",
+    "7ae557604adf67be50417f59c2c2f167def9a775",
+    "--adapter",
+    "artifacts/attempt-04/adapter",
+    "--out",
+    "artifacts/attempt-04/ship-input-fp16.json"
+  ],
+  "started_utc": "2026-10-04T23:16:36.700331Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T23:41:44.533971Z"
+}

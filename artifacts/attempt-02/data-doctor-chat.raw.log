@@ -1,0 +1,63 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] return_assistant_tokens_mask==True but chat template does not contain `{% generation %}` keyword.
+                                soup data doctor                                
+┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Check              ┃ Verdict ┃ Message               ┃ Evidence              ┃
+┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━┩
+│ chat_template      │ OK      │ tokenizer has a       │ 2507 chars            │
+│                    │         │ chat_template         │                       │
+│ template_render    │ OK      │ 0/200 rows failed to  │                       │
+│                    │         │ render through the    │                       │
+│                    │         │ chat template         │                       │
+│ generation_markers │ MINOR   │ template lacks {%     │                       │
+│                    │         │ generation %} markers │                       │
+│                    │         │ — assistant-only      │                       │
+│                    │         │ masking falls back to │                       │
+│                    │         │ a heuristic that may  │                       │
+│                    │         │ include role-prefix   │                       │
+│                    │         │ tokens in the loss    │                       │
+│ eos_in_labels      │ OK      │ 0/200 rows (0.0%)     │ eos_token_id=[151645] │
+│                    │         │ never train an        │                       │
+│                    │         │ EOS/EOT token — the   │                       │
+│                    │         │ model will not learn  │                       │
+│                    │         │ to stop generating    │                       │
+│ bos_duplication    │ OK      │ tokenizer has no      │                       │
+│                    │         │ bos_token_id          │                       │
+│ system_role        │ OK      │ no rows use a system  │                       │
+│                    │         │ message               │                       │
+│ unknown_roles      │ OK      │ 0/200 rows (0.0%)     │                       │
+│                    │         │ contain a message     │                       │
+│                    │         │ role outside          │                       │
+│                    │         │ ['assistant',         │                       │
+│                    │         │ 'function', 'system', │                       │
+│                    │         │ 'tool', 'user']       │                       │
+│ truncation_risk    │ OK      │ p95 length = 300      │ p50=130, max=406      │
+│                    │         │ tokens vs             │                       │
+│                    │         │ max_length=512; 0/200 │                       │
+│                    │         │ rows (0.0%) would be  │                       │
+│                    │         │ truncated             │                       │
+└────────────────────┴─────────┴───────────────────────┴───────────────────────┘
+╭────────── overall ───────────╮
+│ MINOR — 200/400 rows scanned │
+╰──────────────────────────────╯
+Wrote artifacts/attempt-02/data-doctor.json
+╭─────────────────────────── row 0 (assistant_only) ───────────────────────────╮
+│ <|im_start|>systemĊYouĠareĠQwen,ĠcreatedĠbyĠAlibabaĠCloud.ĠYouĠareĠaĠhelpful │
+│ Ġassistant.<|im_end|>Ċ<|im_start|>userĊÐļÐ°ÐºĠÐ¼Ð½ÐµĠÑģÐ¿Ð»Ð°Ð½Ð¸ÑĢÐ¾Ð²Ð°ÑĤÑ │
+│ ĮĠÑħÐ¾ÑĢÐ¾ÑĪÐ¸Ð¹ĠÐĶÐµÐ½ÑĮĠÑģÐ²ÑıÑĤÐ¾Ð³Ð¾ĠÐĴÐ°Ð»ÐµÐ½ÑĤÐ¸Ð½Ð°ĠÐ´Ð»ÑıĠÐ¼Ð¾ÐµÐ¹Ġ │
+│ Ð²Ð¾Ð·Ð»ÑİÐ±Ð»ÐµÐ½Ð½Ð¾Ð¹?<|im_end|>Ċ<|im_start|>assistantĊÐĴÐ°Ñĥ,ĠÑĤÑĭĠÐ³Ð¾Ð │
+│ ²Ð¾ÑĢÐ¸ÑĪÑĮĠÐºÐ°ÐºĠÐ½Ð°ÑģÑĤÐ¾ÑıÑīÐ¸Ð¹ĠÐ¿Ð°ÑĢÐµÐ½ÑĮ!ĠÐłÐ°ÑģÑģÐºÐ°Ð¶Ð¸ÑĤÐµĠÐ¼Ð │
+│ ½ÐµĠÐ±Ð¾Ð»ÑĮÑĪÐµĠÐ¾ĠÑģÐ²Ð¾ÐµÐ¹ĠÐ²Ð¾Ð·Ð»ÑİÐ±Ð»ÐµÐ½Ð½Ð¾Ð¹ĠÐ¸ĠÐ¾ĠÑĤÐ¾Ð¼,ĠÐºÐ°Ðº │
+│ ĠÐ²ÑĭĠÐ¼Ð¾Ð³Ð»Ð¸ĠÐ±ÑĭĠÑģÐ´ÐµÐ»Ð°ÑĤÑĮĠÐĶÐµÐ½ÑĮĠÑģÐ²ÑıÑĤÐ¾Ð³Ð¾ĠÐĴÐ°Ð»ÐµÐ½ÑĤÐ¸Ð │
+│ ½Ð°ĠÐ²ÐµÑģÐµÐ»ÑĭÐ¼ĠÐ´Ð»ÑıĠÐ²Ð°ÑģĠÐ¾Ð±Ð¾Ð¸Ñħ!<|im_end|>Ċ                      │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────── row 1 (assistant_only) ───────────────────────────╮
+│ <|im_start|>systemĊYouĠareĠQwen,ĠcreatedĠbyĠAlibabaĠCloud.ĠYouĠareĠaĠhelpful │
+│ Ġassistant.<|im_end|>Ċ<|im_start|>userĊÐĺÑģÐ¿Ð¾Ð»ÑĮÐ·ÑĥÐµÑĤĠÐ»Ð¸ĠÑĤÐµÐ»ÐµÑĦÐ │
+│ ¾Ð½ĠÐ²ĠÑĤÐµÐ¼Ð½Ð¾Ð¼ĠÑĢÐµÐ¶Ð¸Ð¼ÐµĠÐ±Ð°ÑĤÐ°ÑĢÐµÑİ,ĠÑĩÐµÐ¼ĠÐ²ĠÐ±ÐµÐ»Ð¾Ð¼?<|im_e │
+│ nd|>Ċ<|im_start|>assistantĊÐĳÐ¾Ð¶Ðµ,ĠÑįÑĤÐ¾ĠÑģÐ»Ð¾Ð¶Ð½Ð¾.ĠÐľÐ¾Ð³ÑĥĠÑıĠÑģÐ½Ð° │
+│ ÑĩÐ°Ð»Ð°ĠÐ½ÐµÐ¼Ð½Ð¾Ð³Ð¾ĠÐ¾Ð±ÑĬÑıÑģÐ½Ð¸ÑĤÑĮĠÐ¾ĠÑĤÐµÐ¼Ð½Ð¾Ð¼ĠÑĢÐµÐ¶Ð¸Ð¼Ðµ?ĠÐŃÑ │
+│ ĤÐ¾ĠÐ´Ð¸Ð·Ð°Ð¹Ð½,ĠÐ²ĠÐºÐ¾ÑĤÐ¾ÑĢÐ¾Ð¼ĠÐ´Ð¸ÑģÐ¿Ð»ÐµÐ¹ĠÐ¸Ð·Ð»ÑĥÑĩÐ°ÐµÑĤĠÐ¾ÑĩÐµÐ½ │
+│ ÑĮĠÐ¼Ð°Ð»Ð¾ĠÑģÐ²ÐµÑĤÐ°,ĠÐ¿Ð¾ÑįÑĤÐ¾Ð¼ÑĥĠÐ²ÑĭĠÐ¼Ð¾Ð¶ÐµÑĤÐµĠÐ¸ÑģÐ¿Ð¾Ð»ÑĮÐ·Ð¾Ð²Ð │
+│ °ÑĤÑĮĠÐµÐ³Ð¾ĠÐ²ĠÑĤÐµÐ¼Ð½Ð¾ÑĤÐµ,ĠÐ½ÐµĠÐ±ÐµÑģÐ¿Ð¾ÐºÐ¾ÑıÑģÑĮ.<|im_end|>Ċ        │
+╰──────────────────────────────────────────────────────────────────────────────╯

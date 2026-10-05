@@ -1,0 +1,39 @@
+[2026-10-04T22:38:48.624642Z] Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 397.90it/s]
+[2026-10-04T22:38:48.635424Z] [transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-10-04T22:38:48.916617Z] Traceback (most recent call last):
+[2026-10-04T22:38:48.916685Z]   File "/content/soup-assignment/scripts/check_streaming.py", line 146, in <module>
+[2026-10-04T22:38:48.916737Z]     raise SystemExit(main())
+[2026-10-04T22:38:48.916813Z]                      ^^^^^^
+[2026-10-04T22:38:48.916833Z]   File "/content/soup-assignment/scripts/check_streaming.py", line 139, in main
+[2026-10-04T22:38:48.916914Z]     result = run_check(args.device, args.dtype)
+[2026-10-04T22:38:48.917002Z]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T22:38:48.917020Z]   File "/content/soup-assignment/scripts/check_streaming.py", line 55, in run_check
+[2026-10-04T22:38:48.917088Z]     streamed, runtime = build_streamed_model(
+[2026-10-04T22:38:48.917133Z]                         ^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T22:38:48.917149Z]   File "/usr/local/lib/python3.12/dist-packages/soup_cli/utils/layer_stream_runtime.py", line 2481, in build_streamed_model
+[2026-10-04T22:38:48.918849Z]     model = get_peft_model(model, lora_config)
+[2026-10-04T22:38:48.918899Z]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T22:38:48.918920Z]   File "/usr/local/lib/python3.12/dist-packages/peft/mapping_func.py", line 122, in get_peft_model
+[2026-10-04T22:38:48.918964Z]     return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+[2026-10-04T22:38:48.919044Z]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T22:38:48.919061Z]   File "/usr/local/lib/python3.12/dist-packages/peft/peft_model.py", line 2063, in __init__
+[2026-10-04T22:38:48.920949Z]     super().__init__(model, peft_config, adapter_name, **kwargs)
+[2026-10-04T22:38:48.920999Z]   File "/usr/local/lib/python3.12/dist-packages/peft/peft_model.py", line 164, in __init__
+[2026-10-04T22:38:48.921019Z]     self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+[2026-10-04T22:38:48.921033Z]                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T22:38:48.921046Z]   File "/usr/local/lib/python3.12/dist-packages/peft/tuners/tuners_utils.py", line 318, in __init__
+[2026-10-04T22:38:48.921060Z]     self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage, state_dict=state_dict)
+[2026-10-04T22:38:48.921073Z]   File "/usr/local/lib/python3.12/dist-packages/peft/tuners/tuners_utils.py", line 917, in inject_adapter
+[2026-10-04T22:38:48.921086Z]     self._create_and_replace(
+[2026-10-04T22:38:48.921099Z]   File "/usr/local/lib/python3.12/dist-packages/peft/tuners/lora/model.py", line 281, in _create_and_replace
+[2026-10-04T22:38:48.921112Z]     new_module = self._create_new_module(lora_config, adapter_name, target, device_map=device_map, **kwargs)
+[2026-10-04T22:38:48.921127Z]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T22:38:48.921140Z]   File "/usr/local/lib/python3.12/dist-packages/peft/tuners/lora/model.py", line 430, in _create_new_module
+[2026-10-04T22:38:48.921773Z]     new_module = dispatcher(target, adapter_name, config=lora_config, **kwargs)
+[2026-10-04T22:38:48.921807Z]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T22:38:48.921823Z]   File "/usr/local/lib/python3.12/dist-packages/peft/tuners/lora/torchao.py", line 160, in dispatch_torchao
+[2026-10-04T22:38:48.921836Z]     if not is_torchao_available():
+[2026-10-04T22:38:48.921850Z]            ^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T22:38:48.921863Z]   File "/usr/local/lib/python3.12/dist-packages/peft/import_utils.py", line 147, in is_torchao_available
+[2026-10-04T22:38:48.921878Z]     raise ImportError(
+[2026-10-04T22:38:48.921890Z] ImportError: Found an incompatible version of torchao. Found version 0.10.0, but only versions above 0.16.0 are supported

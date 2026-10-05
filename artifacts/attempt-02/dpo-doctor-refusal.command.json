@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "soup_cli",
+    "data",
+    "doctor",
+    "data/train.jsonl",
+    "--format",
+    "dpo",
+    "--model",
+    "Qwen/Qwen2.5-0.5B-Instruct"
+  ],
+  "started_utc": "2026-10-04T22:56:25.717175Z",
+  "returncode": 2,
+  "finished_utc": "2026-10-04T22:56:26.652900Z"
+}

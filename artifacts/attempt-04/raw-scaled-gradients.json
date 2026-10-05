@@ -1,0 +1,723 @@
+{
+  "parameters": {
+    "base_model.model.model.layers.23.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 5336.0
+    },
+    "base_model.model.model.layers.23.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 23.9375
+    },
+    "base_model.model.model.layers.23.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 2578.0
+    },
+    "base_model.model.model.layers.23.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 15.6640625
+    },
+    "base_model.model.model.layers.22.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 2620.0
+    },
+    "base_model.model.model.layers.22.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 6.80078125
+    },
+    "base_model.model.model.layers.22.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 1634.0
+    },
+    "base_model.model.model.layers.22.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 21.515625
+    },
+    "base_model.model.model.layers.21.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 4236.0
+    },
+    "base_model.model.model.layers.21.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 26.34375
+    },
+    "base_model.model.model.layers.21.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 2374.0
+    },
+    "base_model.model.model.layers.21.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 32.21875
+    },
+    "base_model.model.model.layers.20.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 7588.0
+    },
+    "base_model.model.model.layers.20.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 43.09375
+    },
+    "base_model.model.model.layers.20.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 2216.0
+    },
+    "base_model.model.model.layers.20.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 18.015625
+    },
+    "base_model.model.model.layers.19.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 4244.0
+    },
+    "base_model.model.model.layers.19.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 20.671875
+    },
+    "base_model.model.model.layers.19.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 2506.0
+    },
+    "base_model.model.model.layers.19.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 44.90625
+    },
+    "base_model.model.model.layers.18.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 6448.0
+    },
+    "base_model.model.model.layers.18.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 33.59375
+    },
+    "base_model.model.model.layers.18.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 2892.0
+    },
+    "base_model.model.model.layers.18.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 19.765625
+    },
+    "base_model.model.model.layers.17.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 5860.0
+    },
+    "base_model.model.model.layers.17.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 47.84375
+    },
+    "base_model.model.model.layers.17.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 7680.0
+    },
+    "base_model.model.model.layers.17.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 43.9375
+    },
+    "base_model.model.model.layers.16.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 14344.0
+    },
+    "base_model.model.model.layers.16.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 161.125
+    },
+    "base_model.model.model.layers.16.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 2866.0
+    },
+    "base_model.model.model.layers.16.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 55.0
+    },
+    "base_model.model.model.layers.15.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 6732.0
+    },
+    "base_model.model.model.layers.15.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 41.84375
+    },
+    "base_model.model.model.layers.15.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 5336.0
+    },
+    "base_model.model.model.layers.15.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 57.28125
+    },
+    "base_model.model.model.layers.14.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 8152.0
+    },
+    "base_model.model.model.layers.14.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 84.5625
+    },
+    "base_model.model.model.layers.14.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 2280.0
+    },
+    "base_model.model.model.layers.14.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 33.78125
+    },
+    "base_model.model.model.layers.13.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 10176.0
+    },
+    "base_model.model.model.layers.13.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 111.5
+    },
+    "base_model.model.model.layers.13.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 2612.0
+    },
+    "base_model.model.model.layers.13.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 85.875
+    },
+    "base_model.model.model.layers.12.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 13712.0
+    },
+    "base_model.model.model.layers.12.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 85.5
+    },
+    "base_model.model.model.layers.12.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 2702.0
+    },
+    "base_model.model.model.layers.12.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 67.25
+    },
+    "base_model.model.model.layers.11.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 15760.0
+    },
+    "base_model.model.model.layers.11.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 131.875
+    },
+    "base_model.model.model.layers.11.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 5652.0
+    },
+    "base_model.model.model.layers.11.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 66.0
+    },
+    "base_model.model.model.layers.10.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 6156.0
+    },
+    "base_model.model.model.layers.10.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 80.1875
+    },
+    "base_model.model.model.layers.10.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 4984.0
+    },
+    "base_model.model.model.layers.10.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 46.90625
+    },
+    "base_model.model.model.layers.9.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 7888.0
+    },
+    "base_model.model.model.layers.9.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 67.8125
+    },
+    "base_model.model.model.layers.9.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 5884.0
+    },
+    "base_model.model.model.layers.9.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 64.375
+    },
+    "base_model.model.model.layers.8.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 9344.0
+    },
+    "base_model.model.model.layers.8.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 57.15625
+    },
+    "base_model.model.model.layers.8.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 3256.0
+    },
+    "base_model.model.model.layers.8.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 67.5625
+    },
+    "base_model.model.model.layers.7.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 7096.0
+    },
+    "base_model.model.model.layers.7.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 48.75
+    },
+    "base_model.model.model.layers.7.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 4768.0
+    },
+    "base_model.model.model.layers.7.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 87.3125
+    },
+    "base_model.model.model.layers.6.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 12048.0
+    },
+    "base_model.model.model.layers.6.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 59.625
+    },
+    "base_model.model.model.layers.6.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 6176.0
+    },
+    "base_model.model.model.layers.6.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 50.28125
+    },
+    "base_model.model.model.layers.5.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 9368.0
+    },
+    "base_model.model.model.layers.5.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 48.25
+    },
+    "base_model.model.model.layers.5.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 3420.0
+    },
+    "base_model.model.model.layers.5.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 38.0
+    },
+    "base_model.model.model.layers.4.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 13840.0
+    },
+    "base_model.model.model.layers.4.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 105.0
+    },
+    "base_model.model.model.layers.4.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 5348.0
+    },
+    "base_model.model.model.layers.4.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 49.78125
+    },
+    "base_model.model.model.layers.3.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 11088.0
+    },
+    "base_model.model.model.layers.3.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 69.625
+    },
+    "base_model.model.model.layers.3.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 4776.0
+    },
+    "base_model.model.model.layers.3.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 36.53125
+    },
+    "base_model.model.model.layers.2.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 12040.0
+    },
+    "base_model.model.model.layers.2.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 61.09375
+    },
+    "base_model.model.model.layers.2.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 2506.0
+    },
+    "base_model.model.model.layers.2.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 16.609375
+    },
+    "base_model.model.model.layers.1.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 9520.0
+    },
+    "base_model.model.model.layers.1.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 49.8125
+    },
+    "base_model.model.model.layers.1.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 1290.0
+    },
+    "base_model.model.model.layers.1.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 0,
+      "nonfinite_values": 0,
+      "max_finite_abs": 9.3203125
+    },
+    "base_model.model.model.layers.0.self_attn.v_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 4,
+      "nonfinite_values": 3080,
+      "max_finite_abs": 14280.0
+    },
+    "base_model.model.model.layers.0.self_attn.v_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 4,
+      "nonfinite_values": 28672,
+      "max_finite_abs": 68.125
+    },
+    "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 3,
+      "nonfinite_values": 21504,
+      "max_finite_abs": 2158.0
+    },
+    "base_model.model.model.layers.0.self_attn.q_proj.lora_A.default.weight": {
+      "calls": 400,
+      "nonfinite_calls": 3,
+      "nonfinite_values": 21504,
+      "max_finite_abs": 6.203125
+    }
+  },
+  "nonfinite_events": [
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.v_proj.lora_B.default.weight",
+      "optimizer_step_attempt": 1,
+      "finite": false,
+      "max_abs": 0.0,
+      "nonfinite_values": 1024,
+      "nan_values": 1024,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.v_proj.lora_A.default.weight",
+      "optimizer_step_attempt": 1,
+      "finite": false,
+      "max_abs": 0.0,
+      "nonfinite_values": 7168,
+      "nan_values": 7168,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight",
+      "optimizer_step_attempt": 1,
+      "finite": false,
+      "max_abs": 0.0,
+      "nonfinite_values": 7168,
+      "nan_values": 7168,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_A.default.weight",
+      "optimizer_step_attempt": 1,
+      "finite": false,
+      "max_abs": 0.0,
+      "nonfinite_values": 7168,
+      "nan_values": 7168,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.v_proj.lora_B.default.weight",
+      "optimizer_step_attempt": 1,
+      "finite": false,
+      "max_abs": 0.0,
+      "nonfinite_values": 1024,
+      "nan_values": 1024,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.v_proj.lora_A.default.weight",
+      "optimizer_step_attempt": 1,
+      "finite": false,
+      "max_abs": 0.0,
+      "nonfinite_values": 7168,
+      "nan_values": 7168,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight",
+      "optimizer_step_attempt": 1,
+      "finite": false,
+      "max_abs": 0.0,
+      "nonfinite_values": 7168,
+      "nan_values": 7168,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_A.default.weight",
+      "optimizer_step_attempt": 1,
+      "finite": false,
+      "max_abs": 0.0,
+      "nonfinite_values": 7168,
+      "nan_values": 7168,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.v_proj.lora_B.default.weight",
+      "optimizer_step_attempt": 2,
+      "finite": false,
+      "max_abs": 0.0,
+      "nonfinite_values": 1024,
+      "nan_values": 1024,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.v_proj.lora_A.default.weight",
+      "optimizer_step_attempt": 2,
+      "finite": false,
+      "max_abs": 0.0,
+      "nonfinite_values": 7168,
+      "nan_values": 7168,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight",
+      "optimizer_step_attempt": 2,
+      "finite": false,
+      "max_abs": 0.0,
+      "nonfinite_values": 7168,
+      "nan_values": 7168,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_A.default.weight",
+      "optimizer_step_attempt": 2,
+      "finite": false,
+      "max_abs": 0.0,
+      "nonfinite_values": 7168,
+      "nan_values": 7168,
+      "positive_infinity_values": 0,
+      "negative_infinity_values": 0
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.v_proj.lora_B.default.weight",
+      "optimizer_step_attempt": 33,
+      "finite": false,
+      "max_abs": 5916.0,
+      "nonfinite_values": 8,
+      "nan_values": 0,
+      "positive_infinity_values": 6,
+      "negative_infinity_values": 2
+    },
+    {
+      "parameter": "base_model.model.model.layers.0.self_attn.v_proj.lora_A.default.weight",
+      "optimizer_step_attempt": 33,
+      "finite": false,
+      "max_abs": 0.0,
+      "nonfinite_values": 7168,
+      "nan_values": 0,
+      "positive_infinity_values": 3616,
+      "negative_infinity_values": 3552
+    }
+  ],
+  "scope": "Autograd hooks observe AMP-scaled microbatch gradients before unscale."
+}

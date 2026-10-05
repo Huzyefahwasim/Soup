@@ -1,0 +1,33 @@
+Cloning into '/content/verification-source'...
+HEAD is now at b21a349 Add verification retry for unchanged saved training artifacts
+[2026-10-04T23:25:44.436408Z] [transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-10-04T23:25:46.753393Z] Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:00<04:33,  1.06it/s]Loading weights:  42%|████▏     | 123/290 [00:01<00:01, 158.65it/s]Loading weights:  65%|██████▍   | 188/290 [00:01<00:00, 163.18it/s]Loading weights:  80%|███████▉  | 231/290 [00:01<00:00, 183.19it/s]Loading weights:  92%|█████████▏| 268/290 [00:01<00:00, 195.26it/s]Loading weights: 100%|██████████| 290/290 [00:01<00:00, 158.85it/s]
+[2026-10-04T23:26:13.408702Z] [transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-10-04T23:26:16.369387Z] Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:01<05:48,  1.21s/it]Loading weights:  38%|███▊      | 111/290 [00:01<00:01, 112.26it/s]Loading weights:  54%|█████▍    | 157/290 [00:01<00:01, 119.09it/s]Loading weights:  65%|██████▍   | 188/290 [00:01<00:00, 118.68it/s]Loading weights:  73%|███████▎  | 212/290 [00:02<00:00, 125.89it/s]Loading weights:  80%|████████  | 233/290 [00:02<00:00, 137.50it/s]Loading weights:  92%|█████████▏| 267/290 [00:02<00:00, 168.99it/s]Loading weights: 100%|██████████| 290/290 [00:02<00:00, 121.29it/s]
+{
+  "finished_utc": "2026-10-04T23:26:40.144678Z",
+  "collection_status": "complete",
+  "failed_commands": [],
+  "adapter_verification": {
+    "verdict": "SHIP",
+    "checks": {
+      "matching_tensor_layout": true,
+      "finite_tensors": true,
+      "updated_lora_b": true,
+      "matched_data": true,
+      "portable_reload": true,
+      "active_adapter": true,
+      "base_control": true,
+      "heldout_improvement": true,
+      "matching_adapter_config": true
+    },
+    "n_test": 50,
+    "mean_margin_gain": 0.36958324432373046,
+    "paired_bootstrap_95_lower": 0.20713496398925782,
+    "min_margin_gain": 0.05,
+    "adapter_probe_delta": 1.3829007148742676,
+    "repeat_noise": 0.0,
+    "scope": "adapter verification; combine with streaming parity and run evidence"
+  },
+  "scope": "Verification retry only. The original training run and its failed checks are unchanged."
+}

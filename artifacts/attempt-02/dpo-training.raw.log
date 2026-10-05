@@ -1,0 +1,66 @@
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files:  29%|██▊       | 2/7 [00:00<00:00, 16.30it/s]Fetching 7 files:  57%|█████▋    | 4/7 [00:07<00:06,  2.21s/it]Fetching 7 files: 100%|██████████| 7/7 [00:07<00:00,  1.08s/it]
+PRE-TRAINING MEMORY BUDGET {
+  "assumptions": {
+    "batch_pairs": 1,
+    "concatenated_rows": 2,
+    "max_sequence": 512,
+    "base_bytes_per_parameter": 2,
+    "rank": 8,
+    "quantization": "none",
+    "reference": "sequential shared base, frozen initial LoRA"
+  },
+  "layer_parameters": 14912384,
+  "lora_parameters": 540672,
+  "logit_elements": 155582464,
+  "parts_bytes": {
+    "resident_embedding_and_head": 272269312,
+    "two_streaming_layer_buffers": 59649536,
+    "fp32_adapter_grad_and_adam_states": 8650752,
+    "frozen_reference_adapter": 2162688,
+    "checkpoint_boundaries": 45875200,
+    "logits_and_loss_workspace_envelope": 2178154496,
+    "within_layer_activations_allowance": 79691776,
+    "cuda_context_and_allocator_allowance": 1073741824
+  },
+  "conservative_total_gib": 3.4647021293640137,
+  "host_decoder_store_gib": 0.6666355133056641,
+  "full_fp16_weights_gib": 0.9202060699462891,
+  "caveats": [
+    "14 bytes per logit is an envelope for overlapping logits, float32 loss operations and temporary tensors, not a measured allocation.",
+    "The reference pass adds compute and transient activations; its base weights are shared. It does not add a second full model.",
+    "Streaming retains host weights and checkpoints. Free Colab RAM and disk must also fit.",
+    "nvidia-smi reports driver allocations; allocated/reserved PyTorch peaks and sampled driver peaks measure different things."
+  ],
+  "gpu_total_gib": 14.56317138671875
+}
+Loading tokenizer: 
+/root/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae55
+7604adf67be50417f59c2c2f167def9a775
+╭────────────────────── Layer streaming disk pre-flight ───────────────────────╮
+│ HF/local source: 0.99 GB                                                     │
+│ Soup materialized copy: 0.00 GB (no write required)                          │
+│ Layer-shard cache: 0.99 GB (write required)                                  │
+│ Projected total on disk: 1.98 GB                                             │
+│ Additional writes before training: 0.99 GB                                   │
+│ Free on target volume (layer-shard cache): 75.25 GB                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+layer-stream sharder: skipping symlinked shard model.safetensors
+MEMORY {"utc": "2026-10-04T22:57:25.920130+00:00", "phase": "final_or_failure", "allocated_bytes": 0, "reserved_bytes": 0, "peak_allocated_bytes": 0, "peak_reserved_bytes": 0, "host_peak_rss_bytes": 1936080896}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/soup-assignment/scripts/train_dpo.py", line 164, in <module>
+    main()
+  File "/content/soup-assignment/scripts/train_dpo.py", line 76, in main
+    wrapper.setup(dataset)
+  File "/usr/local/lib/python3.12/dist-packages/soup_cli/trainer/dpo.py", line 102, in setup
+    self._setup_streaming_transformers(cfg, tcfg)
+  File "/usr/local/lib/python3.12/dist-packages/soup_cli/trainer/stream_setup.py", line 565, in _setup_streaming_transformers
+    source_bytes = source_weight_bytes(weights_dir)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/soup_cli/utils/layer_shard.py", line 668, in source_weight_bytes
+    return sum(os.path.getsize(path) for path in _discover_safetensors(weights_dir))
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/soup_cli/utils/layer_shard.py", line 595, in _discover_safetensors
+    raise FileNotFoundError(
+FileNotFoundError: no .safetensors weight files found in /root/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775 — layer streaming needs a safetensors checkpoint

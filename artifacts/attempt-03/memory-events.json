@@ -1,0 +1,371 @@
+[
+  {
+    "utc": "2026-10-04T23:04:00.651989+00:00",
+    "phase": "setup_and_streaming_preflight",
+    "allocated_bytes": 345981952,
+    "reserved_bytes": 362807296,
+    "peak_allocated_bytes": 345981952,
+    "peak_reserved_bytes": 362807296,
+    "host_peak_rss_bytes": 2854895616
+  },
+  {
+    "utc": "2026-10-04T23:04:01.273904+00:00",
+    "phase": "before_first_training_step",
+    "allocated_bytes": 345982464,
+    "reserved_bytes": 362807296,
+    "peak_allocated_bytes": 345982464,
+    "peak_reserved_bytes": 362807296,
+    "host_peak_rss_bytes": 2859069440
+  },
+  {
+    "utc": "2026-10-04T23:04:02.174992+00:00",
+    "phase": "reference_forward_completed",
+    "allocated_bytes": 1404433408,
+    "reserved_bytes": 1629487104,
+    "peak_allocated_bytes": 1576424960,
+    "peak_reserved_bytes": 1629487104,
+    "host_peak_rss_bytes": 3240226816
+  },
+  {
+    "utc": "2026-10-04T23:04:02.799556+00:00",
+    "phase": "reference_forward_completed",
+    "allocated_bytes": 1064519168,
+    "reserved_bytes": 2057306112,
+    "peak_allocated_bytes": 1980582400,
+    "peak_reserved_bytes": 2057306112,
+    "host_peak_rss_bytes": 3296849920
+  },
+  {
+    "utc": "2026-10-04T23:04:03.319674+00:00",
+    "phase": "reference_forward_completed",
+    "allocated_bytes": 1389978624,
+    "reserved_bytes": 2057306112,
+    "peak_allocated_bytes": 1980582400,
+    "peak_reserved_bytes": 2057306112,
+    "host_peak_rss_bytes": 3297112064
+  },
+  {
+    "utc": "2026-10-04T23:04:03.864935+00:00",
+    "phase": "reference_forward_completed",
+    "allocated_bytes": 727870976,
+    "reserved_bytes": 2059403264,
+    "peak_allocated_bytes": 1980582400,
+    "peak_reserved_bytes": 2059403264,
+    "host_peak_rss_bytes": 3297112064
+  },
+  {
+    "utc": "2026-10-04T23:04:04.564522+00:00",
+    "phase": "optimizer_step_1",
+    "allocated_bytes": 356644352,
+    "reserved_bytes": 2059403264,
+    "peak_allocated_bytes": 1980582400,
+    "peak_reserved_bytes": 2059403264,
+    "host_peak_rss_bytes": 3372216320
+  },
+  {
+    "utc": "2026-10-04T23:04:04.819105+00:00",
+    "phase": "reference_forward_completed",
+    "allocated_bytes": 1354149376,
+    "reserved_bytes": 2059403264,
+    "peak_allocated_bytes": 1980582400,
+    "peak_reserved_bytes": 2059403264,
+    "host_peak_rss_bytes": 3374444544
+  },
+  {
+    "utc": "2026-10-04T23:04:06.159203+00:00",
+    "phase": "optimizer_step_2",
+    "allocated_bytes": 356645888,
+    "reserved_bytes": 2759852032,
+    "peak_allocated_bytes": 1998936576,
+    "peak_reserved_bytes": 2759852032,
+    "host_peak_rss_bytes": 3374444544
+  },
+  {
+    "utc": "2026-10-04T23:04:07.670191+00:00",
+    "phase": "optimizer_step_3",
+    "allocated_bytes": 360955904,
+    "reserved_bytes": 2759852032,
+    "peak_allocated_bytes": 1998936576,
+    "peak_reserved_bytes": 2759852032,
+    "host_peak_rss_bytes": 3440373760
+  },
+  {
+    "utc": "2026-10-04T23:04:09.095073+00:00",
+    "phase": "optimizer_step_4",
+    "allocated_bytes": 360951296,
+    "reserved_bytes": 2759852032,
+    "peak_allocated_bytes": 1998936576,
+    "peak_reserved_bytes": 2759852032,
+    "host_peak_rss_bytes": 3442601984
+  },
+  {
+    "utc": "2026-10-04T23:04:10.543767+00:00",
+    "phase": "optimizer_step_5",
+    "allocated_bytes": 360955904,
+    "reserved_bytes": 2759852032,
+    "peak_allocated_bytes": 1998936576,
+    "peak_reserved_bytes": 2759852032,
+    "host_peak_rss_bytes": 3442601984
+  },
+  {
+    "utc": "2026-10-04T23:04:12.111917+00:00",
+    "phase": "optimizer_step_6",
+    "allocated_bytes": 360971264,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450204160
+  },
+  {
+    "utc": "2026-10-04T23:04:13.583912+00:00",
+    "phase": "optimizer_step_7",
+    "allocated_bytes": 360965120,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450335232
+  },
+  {
+    "utc": "2026-10-04T23:04:15.213230+00:00",
+    "phase": "optimizer_step_8",
+    "allocated_bytes": 360963584,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450335232
+  },
+  {
+    "utc": "2026-10-04T23:04:17.081583+00:00",
+    "phase": "optimizer_step_9",
+    "allocated_bytes": 360951296,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450335232
+  },
+  {
+    "utc": "2026-10-04T23:04:18.828109+00:00",
+    "phase": "optimizer_step_10",
+    "allocated_bytes": 360968192,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450335232
+  },
+  {
+    "utc": "2026-10-04T23:04:20.293914+00:00",
+    "phase": "optimizer_step_11",
+    "allocated_bytes": 360957440,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450466304
+  },
+  {
+    "utc": "2026-10-04T23:04:21.758132+00:00",
+    "phase": "optimizer_step_12",
+    "allocated_bytes": 360963584,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450466304
+  },
+  {
+    "utc": "2026-10-04T23:04:23.193114+00:00",
+    "phase": "optimizer_step_13",
+    "allocated_bytes": 360955904,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450466304
+  },
+  {
+    "utc": "2026-10-04T23:04:24.701569+00:00",
+    "phase": "optimizer_step_14",
+    "allocated_bytes": 360966656,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450597376
+  },
+  {
+    "utc": "2026-10-04T23:04:26.224862+00:00",
+    "phase": "optimizer_step_15",
+    "allocated_bytes": 360971264,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450597376
+  },
+  {
+    "utc": "2026-10-04T23:04:27.723823+00:00",
+    "phase": "optimizer_step_16",
+    "allocated_bytes": 360963584,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450597376
+  },
+  {
+    "utc": "2026-10-04T23:04:29.546559+00:00",
+    "phase": "optimizer_step_17",
+    "allocated_bytes": 360955904,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450728448
+  },
+  {
+    "utc": "2026-10-04T23:04:31.695141+00:00",
+    "phase": "optimizer_step_18",
+    "allocated_bytes": 360962048,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450728448
+  },
+  {
+    "utc": "2026-10-04T23:04:33.282116+00:00",
+    "phase": "optimizer_step_19",
+    "allocated_bytes": 360980480,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450728448
+  },
+  {
+    "utc": "2026-10-04T23:04:34.730574+00:00",
+    "phase": "optimizer_step_20",
+    "allocated_bytes": 360958976,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450728448
+  },
+  {
+    "utc": "2026-10-04T23:04:36.184105+00:00",
+    "phase": "optimizer_step_21",
+    "allocated_bytes": 360949760,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3450728448
+  },
+  {
+    "utc": "2026-10-04T23:04:37.693451+00:00",
+    "phase": "optimizer_step_22",
+    "allocated_bytes": 360960512,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3465801728
+  },
+  {
+    "utc": "2026-10-04T23:04:39.173127+00:00",
+    "phase": "optimizer_step_23",
+    "allocated_bytes": 360962048,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3465801728
+  },
+  {
+    "utc": "2026-10-04T23:04:40.582231+00:00",
+    "phase": "optimizer_step_24",
+    "allocated_bytes": 360952832,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3465801728
+  },
+  {
+    "utc": "2026-10-04T23:04:42.377918+00:00",
+    "phase": "optimizer_step_25",
+    "allocated_bytes": 360965120,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3465801728
+  },
+  {
+    "utc": "2026-10-04T23:04:44.351088+00:00",
+    "phase": "optimizer_step_26",
+    "allocated_bytes": 360954368,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3465801728
+  },
+  {
+    "utc": "2026-10-04T23:04:45.788036+00:00",
+    "phase": "optimizer_step_27",
+    "allocated_bytes": 360960512,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3465801728
+  },
+  {
+    "utc": "2026-10-04T23:04:47.241056+00:00",
+    "phase": "optimizer_step_28",
+    "allocated_bytes": 360960512,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3465801728
+  },
+  {
+    "utc": "2026-10-04T23:04:48.693456+00:00",
+    "phase": "optimizer_step_29",
+    "allocated_bytes": 360949760,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3465801728
+  },
+  {
+    "utc": "2026-10-04T23:04:50.171106+00:00",
+    "phase": "optimizer_step_30",
+    "allocated_bytes": 360954368,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3466063872
+  },
+  {
+    "utc": "2026-10-04T23:04:51.628947+00:00",
+    "phase": "optimizer_step_31",
+    "allocated_bytes": 360955904,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3466063872
+  },
+  {
+    "utc": "2026-10-04T23:04:53.076565+00:00",
+    "phase": "optimizer_step_32",
+    "allocated_bytes": 360962048,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3466063872
+  },
+  {
+    "utc": "2026-10-04T23:04:54.709197+00:00",
+    "phase": "optimizer_step_33",
+    "allocated_bytes": 360958976,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3466063872
+  },
+  {
+    "utc": "2026-10-04T23:04:55.729158+00:00",
+    "phase": "final_or_failure",
+    "allocated_bytes": 360958976,
+    "reserved_bytes": 4768923648,
+    "peak_allocated_bytes": 2660531200,
+    "peak_reserved_bytes": 4768923648,
+    "host_peak_rss_bytes": 3466063872
+  }
+]

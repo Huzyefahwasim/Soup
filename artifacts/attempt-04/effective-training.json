@@ -1,0 +1,28 @@
+{
+  "fp16": true,
+  "bf16": false,
+  "beta": 0.1,
+  "loss_type": [
+    "sigmoid"
+  ],
+  "truncation_mode": "keep_start",
+  "max_length": 512,
+  "max_prompt_length": 256,
+  "hf_gradient_checkpointing": false,
+  "attention_implementation": "sdpa",
+  "stream_runtime": {
+    "n_layers": 24,
+    "buffers": 2,
+    "buffer_bytes": 59649536,
+    "large_buffer_bytes": 0,
+    "store_bytes": 715794432,
+    "pinned": true,
+    "tier": "ram",
+    "disk_bytes": 0,
+    "layer_loads": 0,
+    "large_loads": 0,
+    "device": "cuda",
+    "total_params": 494032768
+  },
+  "nonfinite_numeric_encoding": "NaN, Infinity and -Infinity are explicit JSON strings in telemetry."
+}

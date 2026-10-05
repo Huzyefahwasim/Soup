@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "soup_cli",
+    "doctor",
+    "--config",
+    "configs/soup.yaml"
+  ],
+  "started_utc": "2026-10-04T23:11:39.629281Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T23:12:01.550956Z"
+}

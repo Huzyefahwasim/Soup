@@ -1,0 +1,53 @@
+[2026-10-04T23:03:21.369753Z] Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 381.72it/s]
+[2026-10-04T23:03:21.386522Z] [transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-10-04T23:03:21.623009Z] [transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-10-04T23:03:21.656666Z] Loading weights:   0%|          | 0/50 [00:00<?, ?it/s]Loading weights: 100%|██████████| 50/50 [00:00<00:00, 5039.41it/s]
+[2026-10-04T23:03:22.179901Z] /content/soup-assignment/scripts/check_streaming.py:120: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+[2026-10-04T23:03:22.181538Z] Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+[2026-10-04T23:03:22.181588Z]   result["loss_difference"] = abs(float(streamed_loss) - float(resident_loss))
+[2026-10-04T23:03:22.236555Z] {
+[2026-10-04T23:03:22.237541Z]   "forward_pass": true,
+[2026-10-04T23:03:22.237607Z]   "backward_pass": true,
+[2026-10-04T23:03:22.237623Z]   "forward_bit_exact": true,
+[2026-10-04T23:03:22.237634Z]   "forward_max_abs": 0.0,
+[2026-10-04T23:03:22.237645Z]   "gradient_relative_l2": 0.0,
+[2026-10-04T23:03:22.237655Z]   "gradient_cosine": 1.0000000000000002,
+[2026-10-04T23:03:22.237666Z]   "gradient_tensors": 16,
+[2026-10-04T23:03:22.237677Z]   "atol": 0.0002,
+[2026-10-04T23:03:22.237688Z]   "rtol": 0.002,
+[2026-10-04T23:03:22.237699Z]   "reference_pass": true,
+[2026-10-04T23:03:22.237709Z]   "policy_reference_logprob_gap": 0.08251380920410156,
+[2026-10-04T23:03:22.237720Z]   "all_expected_gradients": true,
+[2026-10-04T23:03:22.237730Z]   "loss_difference": 0.0,
+[2026-10-04T23:03:22.237741Z]   "base_frozen": true,
+[2026-10-04T23:03:22.237752Z]   "decoder_base_on_meta": true,
+[2026-10-04T23:03:22.237762Z]   "optimizer_changed_parameters": true,
+[2026-10-04T23:03:22.237773Z]   "updated_parameters_finite": true,
+[2026-10-04T23:03:22.237783Z]   "negative_control_rejected": true,
+[2026-10-04T23:03:22.237793Z]   "scope": "random four-layer Qwen2; this does not prove checkpoint-scale or NF4 parity",
+[2026-10-04T23:03:22.237805Z]   "attention_implementation": "sdpa",
+[2026-10-04T23:03:22.237815Z]   "dtype": "float16",
+[2026-10-04T23:03:22.237826Z]   "device": "cuda",
+[2026-10-04T23:03:22.237836Z]   "runtime": {
+[2026-10-04T23:03:22.237846Z]     "n_layers": 4,
+[2026-10-04T23:03:22.237856Z]     "buffers": 2,
+[2026-10-04T23:03:22.237867Z]     "buffer_bytes": 148480,
+[2026-10-04T23:03:22.237877Z]     "large_buffer_bytes": 0,
+[2026-10-04T23:03:22.237886Z]     "store_bytes": 296960,
+[2026-10-04T23:03:22.237896Z]     "pinned": true,
+[2026-10-04T23:03:22.237905Z]     "tier": "ram",
+[2026-10-04T23:03:22.237914Z]     "disk_bytes": 0,
+[2026-10-04T23:03:22.237924Z]     "layer_loads": 10,
+[2026-10-04T23:03:22.237933Z]     "large_loads": 0,
+[2026-10-04T23:03:22.237942Z]     "device": "cuda",
+[2026-10-04T23:03:22.237952Z]     "total_params": 164928
+[2026-10-04T23:03:22.237961Z]   },
+[2026-10-04T23:03:22.237971Z]   "torch": "2.11.0+cu128",
+[2026-10-04T23:03:22.237980Z]   "adapter_dtypes": [
+[2026-10-04T23:03:22.237991Z]     "torch.float32"
+[2026-10-04T23:03:22.238000Z]   ],
+[2026-10-04T23:03:22.238010Z]   "gpu": "Tesla T4",
+[2026-10-04T23:03:22.238021Z]   "peak_allocated": 20030464,
+[2026-10-04T23:03:22.238031Z]   "peak_reserved": 25165824,
+[2026-10-04T23:03:22.238040Z]   "pass": true
+[2026-10-04T23:03:22.238051Z] }

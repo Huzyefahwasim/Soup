@@ -1,0 +1,17 @@
+[2026-10-04T23:16:32.462412Z] [transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[2026-10-04T23:16:33.554200Z] Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:00<02:00,  2.40it/s]Loading weights:  51%|█████▏    | 149/290 [00:00<00:00, 374.90it/s]Loading weights:  80%|████████  | 233/290 [00:00<00:00, 426.22it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 370.79it/s]
+[2026-10-04T23:16:34.188173Z] Traceback (most recent call last):
+[2026-10-04T23:16:34.188421Z]   File "/content/submitted-source/scripts/verify_adapter.py", line 205, in <module>
+[2026-10-04T23:16:34.188459Z]     raise SystemExit(main())
+[2026-10-04T23:16:34.188475Z]                      ^^^^^^
+[2026-10-04T23:16:34.188487Z]   File "/content/submitted-source/scripts/verify_adapter.py", line 189, in main
+[2026-10-04T23:16:34.188503Z]     evaluate(args)
+[2026-10-04T23:16:34.188529Z]   File "/content/submitted-source/scripts/verify_adapter.py", line 141, in evaluate
+[2026-10-04T23:16:34.188628Z]     total, probe = score(row["prompt"], row[response])
+[2026-10-04T23:16:34.188705Z]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T23:16:34.188720Z]   File "/content/submitted-source/scripts/verify_adapter.py", line 124, in score
+[2026-10-04T23:16:34.188827Z]     ids, boundary = response_tokens(tokenizer, prompt, response,
+[2026-10-04T23:16:34.188871Z]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T23:16:34.188885Z]   File "/content/submitted-source/scripts/verify_adapter.py", line 88, in response_tokens
+[2026-10-04T23:16:34.188986Z]     raise ValueError("chat tokenization does not preserve the prompt prefix")
+[2026-10-04T23:16:34.189010Z] ValueError: chat tokenization does not preserve the prompt prefix

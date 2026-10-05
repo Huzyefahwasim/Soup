@@ -1,0 +1,11 @@
+[
+  {
+    "utc": "2026-10-04T22:57:25.920130+00:00",
+    "phase": "final_or_failure",
+    "allocated_bytes": 0,
+    "reserved_bytes": 0,
+    "peak_allocated_bytes": 0,
+    "peak_reserved_bytes": 0,
+    "host_peak_rss_bytes": 1936080896
+  }
+]

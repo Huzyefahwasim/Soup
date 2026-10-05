@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "pip",
+    "uninstall",
+    "-y",
+    "torchao"
+  ],
+  "started_utc": "2026-10-04T22:55:55.387595Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T22:55:59.395928Z"
+}

@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "scripts/verify_adapter.py",
+    "evaluate",
+    "--model",
+    "/content/submitted-source/model-cache/7ae557604adf67be50417f59c2c2f167def9a775",
+    "--revision",
+    "7ae557604adf67be50417f59c2c2f167def9a775",
+    "--data",
+    "data/test.jsonl",
+    "--device",
+    "cuda",
+    "--dtype",
+    "float16",
+    "--out",
+    "/content/verification-source/artifacts/attempt-05/baseline.json"
+  ],
+  "started_utc": "2026-10-04T23:25:20.843256Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T23:25:55.407139Z"
+}

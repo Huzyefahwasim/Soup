@@ -1,0 +1,86 @@
+{
+  "task": {
+    "mode": "metric",
+    "base": 0.5,
+    "tuned": 0.5
+  },
+  "benchmarks": {
+    "mini_mmlu": {
+      "base": 0.6538461538461539,
+      "tuned": 0.6538461538461539
+    },
+    "mini_common_sense": {
+      "base": 0.875,
+      "tuned": 0.875
+    },
+    "mini_instruction": {
+      "base": 0.875,
+      "tuned": 0.875
+    },
+    "mini_arithmetic": {
+      "base": 0.9722222222222222,
+      "tuned": 1.0
+    },
+    "mini_tool_call": {
+      "base": 0.9,
+      "tuned": 0.9
+    },
+    "mini_format_json": {
+      "base": 1.0,
+      "tuned": 1.0
+    },
+    "mini_safety": {
+      "base": 0.925,
+      "tuned": 0.925
+    },
+    "mini_over_refusal": {
+      "base": 0.95,
+      "tuned": 0.975
+    }
+  },
+  "measurement": {
+    "started_utc": "2026-10-04T23:16:39.064402Z",
+    "dtype": "float16",
+    "device": "cuda",
+    "base_model_directory": "/content/submitted-source/model-cache/7ae557604adf67be50417f59c2c2f167def9a775",
+    "base_model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "adapter": "artifacts/attempt-04/adapter",
+    "decode": "greedy",
+    "max_new_tokens": 256,
+    "general_suite": [
+      "mini_mmlu",
+      "mini_common_sense",
+      "mini_instruction",
+      "mini_arithmetic",
+      "mini_tool_call",
+      "mini_format_json",
+      "mini_safety",
+      "mini_over_refusal"
+    ],
+    "task_count": 8,
+    "task_sha256": "cc44e895e89b615bf03403fc21cb2edbe43f80979d1b7e450084e48e594ddde0",
+    "adapter_sha256": "1156d6155c854b33fe3f1343630574963dd612c96d7b876da712e312aaed999d",
+    "versions": {
+      "soup-cli": "0.75.2",
+      "torch": "2.11.0+cu128",
+      "transformers": "5.16.1",
+      "peft": "0.20.0",
+      "trl": "0.29.0"
+    },
+    "scorer": {
+      "soup_version": "0.75.2",
+      "scorer_revision": 1
+    },
+    "limitations": [
+      "The eight task cases and bundled mini suites are small functional checks.",
+      "No remote judge is used; this is not a support-ticket quality assessment.",
+      "An offline verdict trusts this producer; keep response journals and raw logs."
+    ],
+    "gpu": "Tesla T4",
+    "finished_utc": "2026-10-04T23:41:43.195188Z"
+  },
+  "provenance": {
+    "soup_version": "0.75.2",
+    "scorer_revision": 1
+  }
+}

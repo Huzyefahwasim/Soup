@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "scripts/verify_adapter.py",
+    "compare",
+    "--before",
+    "/content/verification-source/artifacts/attempt-05/before.npz",
+    "--metrics-before",
+    "/content/verification-source/artifacts/attempt-05/baseline.json",
+    "--after",
+    "/content/verification-source/artifacts/attempt-05/after.npz",
+    "--metrics-after",
+    "/content/verification-source/artifacts/attempt-05/trained.json",
+    "--out",
+    "/content/verification-source/artifacts/attempt-05/verification.json"
+  ],
+  "started_utc": "2026-10-04T23:26:39.322192Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T23:26:39.763552Z"
+}

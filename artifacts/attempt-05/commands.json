@@ -1,0 +1,122 @@
+[
+  {
+    "name": "baseline-heldout",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/verify_adapter.py",
+      "evaluate",
+      "--model",
+      "/content/submitted-source/model-cache/7ae557604adf67be50417f59c2c2f167def9a775",
+      "--revision",
+      "7ae557604adf67be50417f59c2c2f167def9a775",
+      "--data",
+      "data/test.jsonl",
+      "--device",
+      "cuda",
+      "--dtype",
+      "float16",
+      "--out",
+      "/content/verification-source/artifacts/attempt-05/baseline.json"
+    ],
+    "started_utc": "2026-10-04T23:25:20.843256Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:25:55.407139Z"
+  },
+  {
+    "name": "trained-heldout",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/verify_adapter.py",
+      "evaluate",
+      "--model",
+      "/content/submitted-source/model-cache/7ae557604adf67be50417f59c2c2f167def9a775",
+      "--revision",
+      "7ae557604adf67be50417f59c2c2f167def9a775",
+      "--data",
+      "data/test.jsonl",
+      "--device",
+      "cuda",
+      "--dtype",
+      "float16",
+      "--adapter",
+      "/content/submitted-source/artifacts/attempt-04/adapter",
+      "--out",
+      "/content/verification-source/artifacts/attempt-05/trained.json"
+    ],
+    "started_utc": "2026-10-04T23:25:55.408117Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:26:38.428452Z"
+  },
+  {
+    "name": "snapshot-before",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/verify_adapter.py",
+      "snapshot",
+      "--adapter",
+      "/content/submitted-source/artifacts/attempt-04/initial_adapter",
+      "--out",
+      "/content/verification-source/artifacts/attempt-05/before.npz"
+    ],
+    "started_utc": "2026-10-04T23:26:38.428962Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:26:38.882111Z"
+  },
+  {
+    "name": "snapshot-after",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/verify_adapter.py",
+      "snapshot",
+      "--adapter",
+      "/content/submitted-source/artifacts/attempt-04/adapter",
+      "--out",
+      "/content/verification-source/artifacts/attempt-05/after.npz"
+    ],
+    "started_utc": "2026-10-04T23:26:38.882848Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:26:39.321377Z"
+  },
+  {
+    "name": "verify-adapter",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/verify_adapter.py",
+      "compare",
+      "--before",
+      "/content/verification-source/artifacts/attempt-05/before.npz",
+      "--metrics-before",
+      "/content/verification-source/artifacts/attempt-05/baseline.json",
+      "--after",
+      "/content/verification-source/artifacts/attempt-05/after.npz",
+      "--metrics-after",
+      "/content/verification-source/artifacts/attempt-05/trained.json",
+      "--out",
+      "/content/verification-source/artifacts/attempt-05/verification.json"
+    ],
+    "started_utc": "2026-10-04T23:26:39.322192Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:26:39.763552Z"
+  },
+  {
+    "name": "negative-control",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/verify_adapter.py",
+      "compare",
+      "--before",
+      "/content/verification-source/artifacts/attempt-05/before.npz",
+      "--metrics-before",
+      "/content/verification-source/artifacts/attempt-05/baseline.json",
+      "--after",
+      "/content/verification-source/artifacts/attempt-05/before.npz",
+      "--metrics-after",
+      "/content/verification-source/artifacts/attempt-05/baseline.json",
+      "--out",
+      "/content/verification-source/artifacts/attempt-05/negative-control.json"
+    ],
+    "started_utc": "2026-10-04T23:26:39.764284Z",
+    "returncode": 1,
+    "finished_utc": "2026-10-04T23:26:40.141808Z"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "scripts/verify_adapter.py",
+    "snapshot",
+    "--adapter",
+    "artifacts/attempt-04/initial_adapter",
+    "--out",
+    "artifacts/attempt-04/before.npz"
+  ],
+  "started_utc": "2026-10-04T23:16:35.517822Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T23:16:35.801387Z"
+}

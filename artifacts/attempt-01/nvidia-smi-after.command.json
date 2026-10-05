@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "nvidia-smi"
+  ],
+  "started_utc": "2026-10-04T22:38:50.055248Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T22:38:50.186615Z"
+}

@@ -1,0 +1,27 @@
+{
+  "features": "{'prompt': List({'content': Value('string'), 'role': Value('string')}), 'chosen': List({'content': Value('string'), 'role': Value('string')}), 'rejected': List({'content': Value('string'), 'role': Value('string')}), 'prompt_ids': List(Value('int64')), 'chosen_ids': List(Value('int64')), 'rejected_ids': List(Value('int64'))}",
+  "rows": 400,
+  "identical_after_tokenization": 0,
+  "empty_completions": 0,
+  "missing_eos": 0,
+  "max_prepared_sequence": 419,
+  "validation_note": "50 rows are prepared; Soup wrapper does not schedule periodic validation evaluation.",
+  "batch_shapes": {
+    "input_ids": [
+      2,
+      174
+    ],
+    "attention_mask": [
+      2,
+      174
+    ],
+    "completion_mask": [
+      2,
+      174
+    ]
+  },
+  "completion_tokens_first_pair": [
+    54,
+    119
+  ]
+}

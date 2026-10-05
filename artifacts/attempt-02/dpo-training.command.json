@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "scripts.train_dpo",
+    "--config",
+    "configs/soup.yaml",
+    "--run-dir",
+    "artifacts/attempt-02"
+  ],
+  "started_utc": "2026-10-04T22:56:58.182460Z",
+  "returncode": 1,
+  "finished_utc": "2026-10-04T22:57:27.406329Z"
+}

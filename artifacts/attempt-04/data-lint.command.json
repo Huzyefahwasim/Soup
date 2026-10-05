@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "soup_cli",
+    "data",
+    "lint",
+    "data/train.jsonl",
+    "--format",
+    "dpo",
+    "--sample",
+    "400",
+    "--output",
+    "artifacts/attempt-04/data-lint.json"
+  ],
+  "started_utc": "2026-10-04T23:12:02.493935Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T23:12:03.502679Z"
+}

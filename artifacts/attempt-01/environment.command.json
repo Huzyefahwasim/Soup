@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "pip",
+    "freeze"
+  ],
+  "started_utc": "2026-10-04T22:37:20.745937Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T22:37:23.798050Z"
+}

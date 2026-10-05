@@ -1,0 +1,324 @@
+[
+  {
+    "name": "nvidia-smi-before",
+    "argv": [
+      "nvidia-smi"
+    ],
+    "started_utc": "2026-10-04T23:11:36.470811Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:11:36.680452Z"
+  },
+  {
+    "name": "environment",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "pip",
+      "freeze"
+    ],
+    "started_utc": "2026-10-04T23:11:36.680830Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:11:39.159562Z"
+  },
+  {
+    "name": "soup-version",
+    "argv": [
+      "/usr/bin/python3",
+      "-c",
+      "import importlib.metadata as m; print(m.version('soup-cli'))"
+    ],
+    "started_utc": "2026-10-04T23:11:39.159966Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:11:39.628576Z"
+  },
+  {
+    "name": "doctor",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "soup_cli",
+      "doctor",
+      "--config",
+      "configs/soup.yaml"
+    ],
+    "started_utc": "2026-10-04T23:11:39.629281Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:12:01.550956Z"
+  },
+  {
+    "name": "dpo-doctor-refusal",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "soup_cli",
+      "data",
+      "doctor",
+      "data/train.jsonl",
+      "--format",
+      "dpo",
+      "--model",
+      "Qwen/Qwen2.5-0.5B-Instruct"
+    ],
+    "started_utc": "2026-10-04T23:12:01.551736Z",
+    "returncode": 2,
+    "finished_utc": "2026-10-04T23:12:02.493455Z"
+  },
+  {
+    "name": "data-lint",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "soup_cli",
+      "data",
+      "lint",
+      "data/train.jsonl",
+      "--format",
+      "dpo",
+      "--sample",
+      "400",
+      "--output",
+      "artifacts/attempt-04/data-lint.json"
+    ],
+    "started_utc": "2026-10-04T23:12:02.493935Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:12:03.502679Z"
+  },
+  {
+    "name": "data-doctor-chat",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "soup_cli",
+      "data",
+      "doctor",
+      "data/doctor_chat.jsonl",
+      "--format",
+      "chatml",
+      "--model",
+      "Qwen/Qwen2.5-0.5B-Instruct",
+      "--max-length",
+      "512",
+      "--show-mask",
+      "2",
+      "--train-on-eot",
+      "--output",
+      "artifacts/attempt-04/data-doctor.json"
+    ],
+    "started_utc": "2026-10-04T23:12:03.503628Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:12:15.446524Z"
+  },
+  {
+    "name": "preflight-dry-run",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "soup_cli",
+      "train",
+      "--config",
+      "configs/soup.yaml",
+      "--dry-run"
+    ],
+    "started_utc": "2026-10-04T23:12:15.447259Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:12:18.907466Z"
+  },
+  {
+    "name": "streaming-parity",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/check_streaming.py",
+      "--out",
+      "artifacts/attempt-04/streaming-parity.json",
+      "--device",
+      "cuda",
+      "--dtype",
+      "float16"
+    ],
+    "started_utc": "2026-10-04T23:12:18.908265Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:12:32.259878Z"
+  },
+  {
+    "name": "dpo-training",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "scripts.train_dpo",
+      "--config",
+      "configs/soup.yaml",
+      "--run-dir",
+      "artifacts/attempt-04"
+    ],
+    "started_utc": "2026-10-04T23:12:32.260624Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:16:02.252537Z"
+  },
+  {
+    "name": "baseline-heldout",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/verify_adapter.py",
+      "evaluate",
+      "--model",
+      "/content/submitted-source/model-cache/7ae557604adf67be50417f59c2c2f167def9a775",
+      "--revision",
+      "7ae557604adf67be50417f59c2c2f167def9a775",
+      "--data",
+      "data/test.jsonl",
+      "--device",
+      "cuda",
+      "--dtype",
+      "float16",
+      "--out",
+      "artifacts/attempt-04/baseline.json"
+    ],
+    "started_utc": "2026-10-04T23:16:02.254157Z",
+    "returncode": 1,
+    "finished_utc": "2026-10-04T23:16:21.003029Z"
+  },
+  {
+    "name": "trained-heldout",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/verify_adapter.py",
+      "evaluate",
+      "--model",
+      "/content/submitted-source/model-cache/7ae557604adf67be50417f59c2c2f167def9a775",
+      "--revision",
+      "7ae557604adf67be50417f59c2c2f167def9a775",
+      "--data",
+      "data/test.jsonl",
+      "--device",
+      "cuda",
+      "--dtype",
+      "float16",
+      "--adapter",
+      "artifacts/attempt-04/adapter",
+      "--out",
+      "artifacts/attempt-04/trained.json"
+    ],
+    "started_utc": "2026-10-04T23:16:21.004158Z",
+    "returncode": 1,
+    "finished_utc": "2026-10-04T23:16:35.517145Z"
+  },
+  {
+    "name": "snapshot-before",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/verify_adapter.py",
+      "snapshot",
+      "--adapter",
+      "artifacts/attempt-04/initial_adapter",
+      "--out",
+      "artifacts/attempt-04/before.npz"
+    ],
+    "started_utc": "2026-10-04T23:16:35.517822Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:16:35.801387Z"
+  },
+  {
+    "name": "snapshot-after",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/verify_adapter.py",
+      "snapshot",
+      "--adapter",
+      "artifacts/attempt-04/adapter",
+      "--out",
+      "artifacts/attempt-04/after.npz"
+    ],
+    "started_utc": "2026-10-04T23:16:35.801958Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:16:36.103353Z"
+  },
+  {
+    "name": "verify-adapter",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/verify_adapter.py",
+      "compare",
+      "--before",
+      "artifacts/attempt-04/before.npz",
+      "--metrics-before",
+      "artifacts/attempt-04/baseline.json",
+      "--after",
+      "artifacts/attempt-04/after.npz",
+      "--metrics-after",
+      "artifacts/attempt-04/trained.json",
+      "--out",
+      "artifacts/attempt-04/verification.json"
+    ],
+    "started_utc": "2026-10-04T23:16:36.104347Z",
+    "returncode": 1,
+    "finished_utc": "2026-10-04T23:16:36.408383Z"
+  },
+  {
+    "name": "negative-control",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/verify_adapter.py",
+      "compare",
+      "--before",
+      "artifacts/attempt-04/before.npz",
+      "--metrics-before",
+      "artifacts/attempt-04/baseline.json",
+      "--after",
+      "artifacts/attempt-04/before.npz",
+      "--metrics-after",
+      "artifacts/attempt-04/baseline.json",
+      "--out",
+      "artifacts/attempt-04/negative-control.json"
+    ],
+    "started_utc": "2026-10-04T23:16:36.410194Z",
+    "returncode": 1,
+    "finished_utc": "2026-10-04T23:16:36.699451Z"
+  },
+  {
+    "name": "ship-score-fp16",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/evaluate_ship.py",
+      "--model",
+      "/content/submitted-source/model-cache/7ae557604adf67be50417f59c2c2f167def9a775",
+      "--revision",
+      "7ae557604adf67be50417f59c2c2f167def9a775",
+      "--adapter",
+      "artifacts/attempt-04/adapter",
+      "--out",
+      "artifacts/attempt-04/ship-input-fp16.json"
+    ],
+    "started_utc": "2026-10-04T23:16:36.700331Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:41:44.533971Z"
+  },
+  {
+    "name": "ship",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "soup_cli",
+      "ship",
+      "--evidence",
+      "artifacts/attempt-04/ship-input-fp16.json",
+      "--config",
+      "artifacts/attempt-04/resolved-soup.yaml",
+      "--output",
+      "artifacts/attempt-04/ship-verdict.json",
+      "--emit-evidence",
+      "artifacts/attempt-04/ship-evidence.json"
+    ],
+    "started_utc": "2026-10-04T23:41:44.534834Z",
+    "returncode": 2,
+    "finished_utc": "2026-10-04T23:41:45.713361Z"
+  },
+  {
+    "name": "nvidia-smi-after",
+    "argv": [
+      "nvidia-smi"
+    ],
+    "started_utc": "2026-10-04T23:41:45.713965Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T23:41:45.861383Z"
+  }
+]

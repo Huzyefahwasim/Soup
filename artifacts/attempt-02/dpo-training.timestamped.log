@@ -1,0 +1,66 @@
+[2026-10-04T22:57:17.552002Z] Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files:  29%|██▊       | 2/7 [00:00<00:00, 16.30it/s]Fetching 7 files:  57%|█████▋    | 4/7 [00:07<00:06,  2.21s/it]Fetching 7 files: 100%|██████████| 7/7 [00:07<00:00,  1.08s/it]
+[2026-10-04T22:57:17.556930Z] PRE-TRAINING MEMORY BUDGET {
+[2026-10-04T22:57:17.556971Z]   "assumptions": {
+[2026-10-04T22:57:17.556985Z]     "batch_pairs": 1,
+[2026-10-04T22:57:17.556996Z]     "concatenated_rows": 2,
+[2026-10-04T22:57:17.557005Z]     "max_sequence": 512,
+[2026-10-04T22:57:17.557016Z]     "base_bytes_per_parameter": 2,
+[2026-10-04T22:57:17.557026Z]     "rank": 8,
+[2026-10-04T22:57:17.557036Z]     "quantization": "none",
+[2026-10-04T22:57:17.557046Z]     "reference": "sequential shared base, frozen initial LoRA"
+[2026-10-04T22:57:17.557058Z]   },
+[2026-10-04T22:57:17.557081Z]   "layer_parameters": 14912384,
+[2026-10-04T22:57:17.557092Z]   "lora_parameters": 540672,
+[2026-10-04T22:57:17.557102Z]   "logit_elements": 155582464,
+[2026-10-04T22:57:17.557112Z]   "parts_bytes": {
+[2026-10-04T22:57:17.557122Z]     "resident_embedding_and_head": 272269312,
+[2026-10-04T22:57:17.557133Z]     "two_streaming_layer_buffers": 59649536,
+[2026-10-04T22:57:17.557144Z]     "fp32_adapter_grad_and_adam_states": 8650752,
+[2026-10-04T22:57:17.557155Z]     "frozen_reference_adapter": 2162688,
+[2026-10-04T22:57:17.557165Z]     "checkpoint_boundaries": 45875200,
+[2026-10-04T22:57:17.557176Z]     "logits_and_loss_workspace_envelope": 2178154496,
+[2026-10-04T22:57:17.557187Z]     "within_layer_activations_allowance": 79691776,
+[2026-10-04T22:57:17.557197Z]     "cuda_context_and_allocator_allowance": 1073741824
+[2026-10-04T22:57:17.557209Z]   },
+[2026-10-04T22:57:17.557219Z]   "conservative_total_gib": 3.4647021293640137,
+[2026-10-04T22:57:17.557230Z]   "host_decoder_store_gib": 0.6666355133056641,
+[2026-10-04T22:57:17.557240Z]   "full_fp16_weights_gib": 0.9202060699462891,
+[2026-10-04T22:57:17.557251Z]   "caveats": [
+[2026-10-04T22:57:17.557263Z]     "14 bytes per logit is an envelope for overlapping logits, float32 loss operations and temporary tensors, not a measured allocation.",
+[2026-10-04T22:57:17.557282Z]     "The reference pass adds compute and transient activations; its base weights are shared. It does not add a second full model.",
+[2026-10-04T22:57:17.557293Z]     "Streaming retains host weights and checkpoints. Free Colab RAM and disk must also fit.",
+[2026-10-04T22:57:17.557332Z]     "nvidia-smi reports driver allocations; allocated/reserved PyTorch peaks and sampled driver peaks measure different things."
+[2026-10-04T22:57:17.557348Z]   ],
+[2026-10-04T22:57:17.557360Z]   "gpu_total_gib": 14.56317138671875
+[2026-10-04T22:57:17.557371Z] }
+[2026-10-04T22:57:25.258150Z] Loading tokenizer: 
+[2026-10-04T22:57:25.258207Z] /root/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae55
+[2026-10-04T22:57:25.258224Z] 7604adf67be50417f59c2c2f167def9a775
+[2026-10-04T22:57:25.617964Z] ╭────────────────────── Layer streaming disk pre-flight ───────────────────────╮
+[2026-10-04T22:57:25.618179Z] │ HF/local source: 0.99 GB                                                     │
+[2026-10-04T22:57:25.618211Z] │ Soup materialized copy: 0.00 GB (no write required)                          │
+[2026-10-04T22:57:25.618226Z] │ Layer-shard cache: 0.99 GB (write required)                                  │
+[2026-10-04T22:57:25.618238Z] │ Projected total on disk: 1.98 GB                                             │
+[2026-10-04T22:57:25.618251Z] │ Additional writes before training: 0.99 GB                                   │
+[2026-10-04T22:57:25.618262Z] │ Free on target volume (layer-shard cache): 75.25 GB                          │
+[2026-10-04T22:57:25.618274Z] ╰──────────────────────────────────────────────────────────────────────────────╯
+[2026-10-04T22:57:25.619069Z] layer-stream sharder: skipping symlinked shard model.safetensors
+[2026-10-04T22:57:25.921379Z] MEMORY {"utc": "2026-10-04T22:57:25.920130+00:00", "phase": "final_or_failure", "allocated_bytes": 0, "reserved_bytes": 0, "peak_allocated_bytes": 0, "peak_reserved_bytes": 0, "host_peak_rss_bytes": 1936080896}
+[2026-10-04T22:57:25.921446Z] Traceback (most recent call last):
+[2026-10-04T22:57:25.921463Z]   File "<frozen runpy>", line 198, in _run_module_as_main
+[2026-10-04T22:57:25.923357Z]   File "<frozen runpy>", line 88, in _run_code
+[2026-10-04T22:57:25.923394Z]   File "/content/soup-assignment/scripts/train_dpo.py", line 164, in <module>
+[2026-10-04T22:57:25.923407Z]     main()
+[2026-10-04T22:57:25.923417Z]   File "/content/soup-assignment/scripts/train_dpo.py", line 76, in main
+[2026-10-04T22:57:25.923427Z]     wrapper.setup(dataset)
+[2026-10-04T22:57:25.923437Z]   File "/usr/local/lib/python3.12/dist-packages/soup_cli/trainer/dpo.py", line 102, in setup
+[2026-10-04T22:57:25.923447Z]     self._setup_streaming_transformers(cfg, tcfg)
+[2026-10-04T22:57:25.923457Z]   File "/usr/local/lib/python3.12/dist-packages/soup_cli/trainer/stream_setup.py", line 565, in _setup_streaming_transformers
+[2026-10-04T22:57:25.923467Z]     source_bytes = source_weight_bytes(weights_dir)
+[2026-10-04T22:57:25.923869Z]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T22:57:25.924044Z]   File "/usr/local/lib/python3.12/dist-packages/soup_cli/utils/layer_shard.py", line 668, in source_weight_bytes
+[2026-10-04T22:57:25.925655Z]     return sum(os.path.getsize(path) for path in _discover_safetensors(weights_dir))
+[2026-10-04T22:57:25.929182Z]                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T22:57:25.929286Z]   File "/usr/local/lib/python3.12/dist-packages/soup_cli/utils/layer_shard.py", line 595, in _discover_safetensors
+[2026-10-04T22:57:25.930469Z]     raise FileNotFoundError(
+[2026-10-04T22:57:25.930656Z] FileNotFoundError: no .safetensors weight files found in /root/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775 — layer streaming needs a safetensors checkpoint

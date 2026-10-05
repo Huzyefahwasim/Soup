@@ -1,0 +1,8 @@
+{"prompt":"Ответьте только числом: сколько будет 17 + 8?", "expected":"25", "category":"russian_arithmetic", "scoring":"exact"}
+{"prompt":"Ответьте только числом: сколько будет 9 * 6?", "expected":"54", "category":"russian_arithmetic", "scoring":"exact"}
+{"prompt":"Ответьте только числом: сколько будет 80 - 37?", "expected":"43", "category":"russian_arithmetic", "scoring":"exact"}
+{"prompt":"Ответьте только одним словом: какой город является столицей Франции?", "expected":"Париж", "category":"russian_general", "scoring":"contains"}
+{"prompt":"Ответьте только одним словом: как называется спутник Земли?", "expected":"Луна", "category":"russian_general", "scoring":"contains"}
+{"prompt":"Правило поддержки: возврат доступен в течение 14 дней после покупки. Клиент купил товар 10 дней назад и спрашивает, возможен ли возврат. Ответьте только ДА или НЕТ.", "expected":"ДА", "category":"mock_support_policy", "scoring":"exact"}
+{"prompt":"Правило поддержки: возврат доступен в течение 14 дней после покупки. Клиент купил товар 20 дней назад и спрашивает, возможен ли возврат. Ответьте только ДА или НЕТ.", "expected":"НЕТ", "category":"mock_support_policy", "scoring":"exact"}
+{"prompt":"Правило поддержки: для проверки заказа нужен номер заказа. Клиент пишет: заказ не пришел, помогите. Какую информацию нужно запросить? Ответьте коротко.", "expected":"номер заказа", "category":"mock_support_policy", "scoring":"contains"}

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "scripts/check_streaming.py",
+    "--out",
+    "artifacts/attempt-01/streaming-parity.json",
+    "--device",
+    "cuda",
+    "--dtype",
+    "float16"
+  ],
+  "started_utc": "2026-10-04T22:38:37.827855Z",
+  "returncode": 1,
+  "finished_utc": "2026-10-04T22:38:50.054281Z"
+}

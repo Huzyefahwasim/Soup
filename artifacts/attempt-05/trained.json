@@ -1,0 +1,376 @@
+{
+  "identity": {
+    "model": "/content/submitted-source/model-cache/7ae557604adf67be50417f59c2c2f167def9a775",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "data_sha256": "62bc5cd59dd86e3d426926a6a010667c089bfdffab37f30ac1f589cabc402f7e",
+    "dtype": "float16",
+    "max_length": 512,
+    "max_prompt_length": 256,
+    "truncation_mode": "keep_start"
+  },
+  "adapter": "/content/submitted-source/artifacts/attempt-04/adapter",
+  "reload_exact": true,
+  "samples": [
+    {
+      "id": "0693b4bc4c89b582b3b9956fe0d9f503b1a5e26c2fbda2a1153880c368f375d5",
+      "chosen": -99.85736846923828,
+      "base_chosen": -99.81310272216797,
+      "rejected": -69.46510314941406,
+      "base_rejected": -69.34333038330078
+    },
+    {
+      "id": "0329d1a0dc554e913864ff3f40c6b51b931db90c278239a91b83eae2847a0ffa",
+      "chosen": -431.05517578125,
+      "base_chosen": -431.419189453125,
+      "rejected": -299.3924255371094,
+      "base_rejected": -299.4525146484375
+    },
+    {
+      "id": "a97af8ae2a79ae3ac69202c34da993c656f03f685730cabfe2ba28f60b58de07",
+      "chosen": -282.15643310546875,
+      "base_chosen": -282.2989501953125,
+      "rejected": -38.26163864135742,
+      "base_rejected": -37.18149185180664
+    },
+    {
+      "id": "63f3b161354bc2965478833b8ece5740f646ec006c525505941cc8107414b8a0",
+      "chosen": -132.67044067382812,
+      "base_chosen": -132.31471252441406,
+      "rejected": -249.39349365234375,
+      "base_rejected": -249.02584838867188
+    },
+    {
+      "id": "93f02749000e5c2c3efef74e521766d6cf8d7ec14a25e2e9f11caa9c4410b8eb",
+      "chosen": -176.8630828857422,
+      "base_chosen": -177.4447784423828,
+      "rejected": -50.14923095703125,
+      "base_rejected": -48.67998123168945
+    },
+    {
+      "id": "878566cf14b8f177a186e12bfceee551b0191f41fd8069b42892c6448077b106",
+      "chosen": -544.61279296875,
+      "base_chosen": -544.7311401367188,
+      "rejected": -85.30352783203125,
+      "base_rejected": -84.67524719238281
+    },
+    {
+      "id": "1438e286db1602ed49788ea6ab23094d0de276a988cd54de69a2ebdc2664e710",
+      "chosen": -62.975975036621094,
+      "base_chosen": -62.69636154174805,
+      "rejected": -321.69390869140625,
+      "base_rejected": -321.7961120605469
+    },
+    {
+      "id": "64fd3051c1bb0c036b0845ed0b9adfa0f1fa6708a6de9e6ca0cd76e8bd74d26c",
+      "chosen": -292.30218505859375,
+      "base_chosen": -292.8175048828125,
+      "rejected": -209.3881072998047,
+      "base_rejected": -209.18080139160156
+    },
+    {
+      "id": "f0a3ac06e853a37aba0f781404690d9fe5afbd219449f9c6c0f5081db5100df6",
+      "chosen": -50.42424774169922,
+      "base_chosen": -50.24768829345703,
+      "rejected": -41.851959228515625,
+      "base_rejected": -41.446170806884766
+    },
+    {
+      "id": "a65c1722edea5547ca8b14e8cd73521fb5af2dbd7ecd2de17bb50c4f2c764549",
+      "chosen": -120.948486328125,
+      "base_chosen": -120.88038635253906,
+      "rejected": -112.66596984863281,
+      "base_rejected": -111.97007751464844
+    },
+    {
+      "id": "27c09c37be4bba9291d95b525989abc525036a123b6f43199e48d79a65404e2c",
+      "chosen": -498.2589416503906,
+      "base_chosen": -497.9892578125,
+      "rejected": -274.2845458984375,
+      "base_rejected": -273.90045166015625
+    },
+    {
+      "id": "b7535f468dad665f251e9d362c1e2292ff4214a1e974f820415ce775c7c600c8",
+      "chosen": -249.15570068359375,
+      "base_chosen": -249.5563201904297,
+      "rejected": -48.42465591430664,
+      "base_rejected": -47.512882232666016
+    },
+    {
+      "id": "f178880f584b6f83c238618a9170afff7bfe861244060b8f9ead408c2c0f4086",
+      "chosen": -190.9501953125,
+      "base_chosen": -191.09255981445312,
+      "rejected": -158.19338989257812,
+      "base_rejected": -157.55955505371094
+    },
+    {
+      "id": "121ae95da4fe6877ba81fbc03a28b0ea4a8237509b7077a6ddbf675cc39b6ca0",
+      "chosen": -34.87904739379883,
+      "base_chosen": -34.18963623046875,
+      "rejected": -44.181488037109375,
+      "base_rejected": -44.01769256591797
+    },
+    {
+      "id": "39f056cd09a5012b4b40d8e52b3ec17f5667b8976921850f102c7c471bb98299",
+      "chosen": -71.93983459472656,
+      "base_chosen": -71.62318420410156,
+      "rejected": -38.35811233520508,
+      "base_rejected": -37.046058654785156
+    },
+    {
+      "id": "39b4d8c4ea56ca77dca92da7e0d6fdfc344a1a22c6c7319d6c739e7ab37baa77",
+      "chosen": -123.38072967529297,
+      "base_chosen": -123.12740325927734,
+      "rejected": -66.95643615722656,
+      "base_rejected": -66.39149475097656
+    },
+    {
+      "id": "eee31743c5cccb21a45dfa8c9f853caa8afc8c39e54c344535098b60cbde4705",
+      "chosen": -223.10818481445312,
+      "base_chosen": -223.15780639648438,
+      "rejected": -109.97843933105469,
+      "base_rejected": -109.55838012695312
+    },
+    {
+      "id": "564c6cbbe1696468c67f397b4c77d3d6639eb716cd51d98135a3b3f0bcddffed",
+      "chosen": -290.8146057128906,
+      "base_chosen": -290.8354797363281,
+      "rejected": -316.05572509765625,
+      "base_rejected": -315.59027099609375
+    },
+    {
+      "id": "ccf4dfcdf8680e047986155c71a72fd7d43625bbef2968b1c73fb52f5f635578",
+      "chosen": -286.4939270019531,
+      "base_chosen": -287.25579833984375,
+      "rejected": -140.0154571533203,
+      "base_rejected": -140.31565856933594
+    },
+    {
+      "id": "d31b09bc350eadb9bbe7a0c42dfaf00b0228be3f446ce944842ae9d681587860",
+      "chosen": -115.49130249023438,
+      "base_chosen": -115.72357177734375,
+      "rejected": -223.63009643554688,
+      "base_rejected": -223.18408203125
+    },
+    {
+      "id": "c229ab76ca29cc9ce92fdfd8b86b22e226b85ab64f094ffd0714511b20aa7181",
+      "chosen": -347.0475769042969,
+      "base_chosen": -347.1650390625,
+      "rejected": -102.21568298339844,
+      "base_rejected": -102.40148162841797
+    },
+    {
+      "id": "7209e2135622bcc6e2d466d9b48d65e01f204369e57d7b81385d849e361fa6e6",
+      "chosen": -109.06461334228516,
+      "base_chosen": -108.97126770019531,
+      "rejected": -105.57211303710938,
+      "base_rejected": -104.41645812988281
+    },
+    {
+      "id": "92705f21195679c9f42451cf195bdabdcf9fa2fed795e9ac77f5d68ad986660a",
+      "chosen": -155.44187927246094,
+      "base_chosen": -155.60690307617188,
+      "rejected": -45.00458908081055,
+      "base_rejected": -45.049827575683594
+    },
+    {
+      "id": "0778426c2974253c6fd43ac79b8853f634d5122d74664cdb17d81a5bd517d33b",
+      "chosen": -97.12503051757812,
+      "base_chosen": -96.8955078125,
+      "rejected": -48.138877868652344,
+      "base_rejected": -47.84809112548828
+    },
+    {
+      "id": "7cadb55dec8f2d40bf0f1f81efee04a47b257ee6883e36d0be583aa5221d7816",
+      "chosen": -405.8795471191406,
+      "base_chosen": -406.84228515625,
+      "rejected": -277.41339111328125,
+      "base_rejected": -277.28314208984375
+    },
+    {
+      "id": "6cdc7563f64602ab209874113b27458847572cba1edb88e2414c7949af0515a4",
+      "chosen": -155.4384307861328,
+      "base_chosen": -155.71778869628906,
+      "rejected": -262.7142639160156,
+      "base_rejected": -262.67413330078125
+    },
+    {
+      "id": "df47948ab5f66f6db68487b651e97fc2701f106b7f26fbf1324c5e77087b19bd",
+      "chosen": -270.0589599609375,
+      "base_chosen": -269.8373107910156,
+      "rejected": -51.70520782470703,
+      "base_rejected": -51.235984802246094
+    },
+    {
+      "id": "47c1d2e95c5d4152af00d66ab14d4b797b31a6a610f453d1e75e7f1ba5cae364",
+      "chosen": -207.7752685546875,
+      "base_chosen": -208.16122436523438,
+      "rejected": -86.09754943847656,
+      "base_rejected": -86.13119506835938
+    },
+    {
+      "id": "3925eb9a14e4c21f80b9dc5703588e400f61fbb6e6630ec59dfd6a344c3ae7a9",
+      "chosen": -28.43903160095215,
+      "base_chosen": -28.534942626953125,
+      "rejected": -73.31207275390625,
+      "base_rejected": -72.87264251708984
+    },
+    {
+      "id": "0e44006acf39668bb4535ef08f9a29e919d0ec53396879596576ff91efb1e7f2",
+      "chosen": -54.449256896972656,
+      "base_chosen": -54.51961898803711,
+      "rejected": -42.75626754760742,
+      "base_rejected": -42.755245208740234
+    },
+    {
+      "id": "1d56648dfbfa3856b220193f47d5cca2438ad47e38f76bcb6a0719cb0bfe62f1",
+      "chosen": -676.2553100585938,
+      "base_chosen": -676.2802124023438,
+      "rejected": -144.7342529296875,
+      "base_rejected": -144.50559997558594
+    },
+    {
+      "id": "de50dbc139bd0be6fb8ca33eb2b885054786300cf2a7c9d76187bf1bfb74f88c",
+      "chosen": -120.58311462402344,
+      "base_chosen": -120.72207641601562,
+      "rejected": -70.31369018554688,
+      "base_rejected": -69.71072387695312
+    },
+    {
+      "id": "07029057d1f8dc91079e51219b99eadb131df872e1d26b83c864f97858b78a34",
+      "chosen": -33.39085006713867,
+      "base_chosen": -31.602275848388672,
+      "rejected": -221.07672119140625,
+      "base_rejected": -220.23825073242188
+    },
+    {
+      "id": "f84b13bae9c5fd2d7695d621d0804557f88978bf086a41802b13c313435ca015",
+      "chosen": -50.66806411743164,
+      "base_chosen": -50.370758056640625,
+      "rejected": -57.061065673828125,
+      "base_rejected": -56.58390426635742
+    },
+    {
+      "id": "29804d6b65fda3369b226975947273945f2efaaa0f31fdf451cdb4d3e3dc348a",
+      "chosen": -53.382659912109375,
+      "base_chosen": -53.13649368286133,
+      "rejected": -47.038021087646484,
+      "base_rejected": -46.86516571044922
+    },
+    {
+      "id": "3b8c33da136672e403fd001d77237b456b406044a52596418a258ba755364dd0",
+      "chosen": -130.93453979492188,
+      "base_chosen": -131.0372314453125,
+      "rejected": -91.51396179199219,
+      "base_rejected": -91.3414306640625
+    },
+    {
+      "id": "1e0456d59024de54d7c5e53aba11c2878e00c2e73354878a619ad536d910c2b0",
+      "chosen": -188.66839599609375,
+      "base_chosen": -188.76043701171875,
+      "rejected": -108.44625091552734,
+      "base_rejected": -108.22689819335938
+    },
+    {
+      "id": "717e036d738e0f515822d43c6c0645b8bd24b64137a5f2a882efcbd875e19992",
+      "chosen": -45.64103698730469,
+      "base_chosen": -44.80311965942383,
+      "rejected": -581.1088256835938,
+      "base_rejected": -581.473388671875
+    },
+    {
+      "id": "afd8cb1e5ed05c7f0992180b61d13e477f792b2abeb5d66bdd1a8ce6f9c945da",
+      "chosen": -81.03691101074219,
+      "base_chosen": -80.26661682128906,
+      "rejected": -211.51248168945312,
+      "base_rejected": -211.3021697998047
+    },
+    {
+      "id": "b3bb7558bc90a5c3ae11e1c8f7078cd8a9e499eeb4a76de607e021b12b2d9e31",
+      "chosen": -142.8895263671875,
+      "base_chosen": -143.33261108398438,
+      "rejected": -212.07177734375,
+      "base_rejected": -212.09246826171875
+    },
+    {
+      "id": "2e68371c65215547a8c1d8c10f7b7a8612a4981b97c2b36f85dd9601930b9572",
+      "chosen": -225.95849609375,
+      "base_chosen": -226.01852416992188,
+      "rejected": -255.89059448242188,
+      "base_rejected": -255.1731414794922
+    },
+    {
+      "id": "374c77074a8fdf5472eba14e71a6694f96748f2b54715eaf4ea25fcfa69552b7",
+      "chosen": -96.91731262207031,
+      "base_chosen": -96.45538330078125,
+      "rejected": -57.826595306396484,
+      "base_rejected": -56.36825942993164
+    },
+    {
+      "id": "7ff6d4d58feeaf9aacc4d0830300e6796cbffed76f2eb05903e7205c8c7cdd39",
+      "chosen": -154.76588439941406,
+      "base_chosen": -154.53469848632812,
+      "rejected": -233.6204833984375,
+      "base_rejected": -233.58680725097656
+    },
+    {
+      "id": "39c588ec3c6bb784809cd594f52e769d9cf56d78e417e350a91f002a1f0ae885",
+      "chosen": -393.70654296875,
+      "base_chosen": -393.8612060546875,
+      "rejected": -67.10331726074219,
+      "base_rejected": -66.7567138671875
+    },
+    {
+      "id": "d4de5991f81f5bf548f6aeccd2a4221807938d711cbbb13c528f32bab583f36d",
+      "chosen": -397.6602783203125,
+      "base_chosen": -397.98980712890625,
+      "rejected": -100.65278625488281,
+      "base_rejected": -100.59048461914062
+    },
+    {
+      "id": "0bd7b3b3535567165cde73856d7f742edc15babaaf7343d3924c37c00137557e",
+      "chosen": -528.28955078125,
+      "base_chosen": -528.2000732421875,
+      "rejected": -82.01114654541016,
+      "base_rejected": -81.85946655273438
+    },
+    {
+      "id": "e6a0d0cd4cf92949fb8741a73616227a3483879c818f0a2ad1984d36a5a8ba08",
+      "chosen": -86.74626922607422,
+      "base_chosen": -86.79617309570312,
+      "rejected": -170.9351043701172,
+      "base_rejected": -171.03216552734375
+    },
+    {
+      "id": "9d42ae87db8bbafdf6a1cfede0b2b2e26796adbcb45db3d2902b210237729322",
+      "chosen": -136.7091522216797,
+      "base_chosen": -136.6580810546875,
+      "rejected": -35.733642578125,
+      "base_rejected": -34.16010665893555
+    },
+    {
+      "id": "197eac4d07ba71d9c3d1fc2593cfcbaa0c080fb0d7a04173fc2487b02bffe6cd",
+      "chosen": -217.43133544921875,
+      "base_chosen": -217.3236083984375,
+      "rejected": -85.04887390136719,
+      "base_rejected": -84.80020141601562
+    },
+    {
+      "id": "1d040cc0f19a84544fc76f6883fde3ceb044b6ffd506688630bdbd77945a6100",
+      "chosen": -224.83609008789062,
+      "base_chosen": -224.95013427734375,
+      "rejected": -211.78976440429688,
+      "base_rejected": -211.45693969726562
+    }
+  ],
+  "effect": {
+    "probe_delta": 1.3829007148742676,
+    "repeat_noise": 0.0
+  },
+  "runtime": {
+    "torch": "2.11.0+cu128",
+    "device": "cuda",
+    "peak_allocated": 1492506624,
+    "peak_reserved": 2231369728,
+    "gpu": "Tesla T4"
+  }
+}

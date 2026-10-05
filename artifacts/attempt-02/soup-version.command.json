@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-c",
+    "import importlib.metadata as m; print(m.version('soup-cli'))"
+  ],
+  "started_utc": "2026-10-04T22:56:04.254621Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T22:56:04.601892Z"
+}

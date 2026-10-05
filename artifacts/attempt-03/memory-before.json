@@ -1,0 +1,34 @@
+{
+  "assumptions": {
+    "batch_pairs": 1,
+    "concatenated_rows": 2,
+    "max_sequence": 512,
+    "base_bytes_per_parameter": 2,
+    "rank": 8,
+    "quantization": "none",
+    "reference": "sequential shared base, frozen initial LoRA"
+  },
+  "layer_parameters": 14912384,
+  "lora_parameters": 540672,
+  "logit_elements": 155582464,
+  "parts_bytes": {
+    "resident_embedding_and_head": 272269312,
+    "two_streaming_layer_buffers": 59649536,
+    "fp32_adapter_grad_and_adam_states": 8650752,
+    "frozen_reference_adapter": 2162688,
+    "checkpoint_boundaries": 45875200,
+    "logits_and_loss_workspace_envelope": 2178154496,
+    "within_layer_activations_allowance": 79691776,
+    "cuda_context_and_allocator_allowance": 1073741824
+  },
+  "conservative_total_gib": 3.4647021293640137,
+  "host_decoder_store_gib": 0.6666355133056641,
+  "full_fp16_weights_gib": 0.9202060699462891,
+  "caveats": [
+    "14 bytes per logit is an envelope for overlapping logits, float32 loss operations and temporary tensors, not a measured allocation.",
+    "The reference pass adds compute and transient activations; its base weights are shared. It does not add a second full model.",
+    "Streaming retains host weights and checkpoints. Free Colab RAM and disk must also fit.",
+    "nvidia-smi reports driver allocations; allocated/reserved PyTorch peaks and sampled driver peaks measure different things."
+  ],
+  "gpu_total_gib": 14.56317138671875
+}

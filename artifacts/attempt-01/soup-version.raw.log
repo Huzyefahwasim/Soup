@@ -1,0 +1,5 @@
+Usage: python -m soup_cli [OPTIONS] [COMMAND] [ARGS]...
+Try 'python -m soup_cli --help' for help.
+╭─ Error ──────────────────────────────────────────────────────────────────────╮
+│ No such option '--version'. Did you mean '--verbose'?                        │
+╰──────────────────────────────────────────────────────────────────────────────╯

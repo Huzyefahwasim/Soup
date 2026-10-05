@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "soup_cli",
+    "--version"
+  ],
+  "started_utc": "2026-10-04T22:37:23.798676Z",
+  "returncode": 2,
+  "finished_utc": "2026-10-04T22:37:24.890565Z"
+}

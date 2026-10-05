@@ -5,11 +5,56 @@ It uses `Qwen/Qwen2.5-0.5B-Instruct`, plain LoRA, and RAM layer streaming. The
 runner records the commands, raw output, timestamps, memory measurements, and
 verification evidence needed to review the result.
 
+The T4 run completed 100 optimizer-step attempts with 97 updates. A fresh
+resident verification of the saved adapter passed the declared checks and
+measured a positive held-out preference-margin gain. The results below separate
+training, the verification retry, and the shipping evaluation.
+
 The production verdict is **DON'T SHIP**. The 500 preference pairs contain
 translated general Russian dialogue, not support tickets or company policies.
 A passing training run or a small public-data evaluation cannot establish
-support quality. Deployment needs reviewed domain data and independent evidence
-that the saved adapter changes behavior and improves held-out outcomes.
+support quality. Deployment needs reviewed support preferences and an independent
+evaluation of support-domain outcomes.
+
+## Measured results
+
+| Measurement | Result |
+|---|---:|
+| Training time | 167.384 s |
+| Attempted / successful optimizer updates | 100 / 97 |
+| AMP-skipped attempts | 1, 2, 33 |
+| First / last logged DPO loss | 0.693147 / 0.683964 |
+| Peak PyTorch CUDA allocated | 2.506 GiB |
+| Peak PyTorch CUDA reserved | 6.340 GiB |
+| Highest sampled driver memory | 6,657 MiB |
+| Mean held-out preference-margin gain | 0.369583 log-probability units |
+| Paired 95% bootstrap lower endpoint | 0.207135 |
+| Saved-adapter verification | All declared checks passed |
+| Unchanged-adapter negative control | Rejected |
+
+[Attempt 04](artifacts/attempt-04) trained at commit
+[`55bf7f4`](https://github.com/Huzyefahwasim/Soup/commit/55bf7f4c500157a4d921cf6d9818cb3947a8f542).
+Its initial verification encountered an API return-type bug, so its evidence
+collection remains incomplete. The failed checks and raw logs remain intact.
+[Attempt 05](artifacts/attempt-05) fixed the verifier at commit
+[`b21a349`](https://github.com/Huzyefahwasim/Soup/commit/b21a3499290c6317baeaf41da6fb0406fe85fab4)
+and reloaded the same saved adapter without retraining. Read its
+[verification](artifacts/attempt-05/verification.json) and
+[negative control](artifacts/attempt-05/negative-control.json) for the measured
+checks. The margin gain uses the 50 public-data project holdouts and does not
+establish support-ticket quality.
+
+The separate FP16 shipping evaluation returned **DON'T SHIP**, with failed rule
+`task_win`: the base and tuned models each scored **4/8 (0.5)** on the eight
+synthetic task cases. Across eight bundled mini suites totaling 270 items,
+arithmetic improved from **35/36 to 36/36** and overrefusal from **38/40 to
+39/40**; the other six suite scores stayed unchanged. No general-suite regression
+triggered the **0.05 absolute-score tolerance**. Each side's response journal contains 278
+responses: eight task cases plus 270 suite items. Read the
+[measured verdict](artifacts/attempt-04/ship-verdict.json) and
+[FP16 evidence](artifacts/attempt-04/ship-input-fp16.json). This gate measures a
+small synthetic task and bundled checks; it does not assess support-domain
+quality.
 
 ## Review the submission
 
@@ -17,35 +62,49 @@ that the saved adapter changes behavior and improves held-out outcomes.
 |---|---|
 | Report | [PDF](report/report.pdf) · [Markdown](report/report.md) |
 | Reproducible Colab notebook | [run_colab.ipynb](notebooks/run_colab.ipynb) |
-| Executed T4 notebook | [completed_t4.ipynb](notebooks/completed_t4.ipynb) |
+| Completed T4 session transcript | [completed_t4.ipynb](notebooks/completed_t4.ipynb) |
+| Exact executed code | [Training](executed-source/training-55bf7f4) · [Verification retry](executed-source/verification-b21a349) |
+| Exported file checksums | [export-checksums.json](export-checksums.json) |
 | Exact training settings | [configs/soup.yaml](configs/soup.yaml) |
+| Part 2 verification script | [verify_adapter.py](scripts/verify_adapter.py) |
 | Initial setup logs | [artifacts/bootstrap](artifacts/bootstrap) |
 | Preserved first attempt | [artifacts/attempt-01](artifacts/attempt-01) |
 | Second attempt | [artifacts/attempt-02](artifacts/attempt-02) |
 | Third attempt, interrupted at step 33 | [artifacts/attempt-03](artifacts/attempt-03) |
-| Full-run retry, results pending | [artifacts/attempt-04](artifacts/attempt-04) |
+| Completed training and initial verification failure | [artifacts/attempt-04](artifacts/attempt-04) |
+| Resident verification retry of the same adapter | [artifacts/attempt-05](artifacts/attempt-05) |
+| Evidence index | [artifacts/README.md](artifacts/README.md) |
 | Static source audit | [docs/silent_failures.md](docs/silent_failures.md) |
 | Verification rules and memory plan | [docs/verification.md](docs/verification.md) |
 | Dataset provenance and split checks | [data/README.md](data/README.md) · [manifest.json](data/manifest.json) |
 
-The report and completed-run links above are reserved for the measured results.
-Review the files that exist before making a runtime claim; the template notebook
-has empty outputs. The report will distinguish completed checks, failed checks,
-and evidence that the run did not produce.
+Use the report for the interpretation and the evidence index to locate raw
+logs and measurements. The reproducible template notebook has empty outputs;
+the completed notebook records the T4 session. It was copied from Colab's
+rendered cell sources and visible outputs after the runtime disconnected;
+original execution counts were unavailable. The successful download widgets
+appear as their visible text. Failed outputs remain included, and the exact
+executed code and byte-preserved raw logs are available separately.
 
 Attempts 01–03 used an older collector that returned zero after failures. Their
 raw logs remain part of the evidence; that outer exit code does not establish
 completed training or evaluation. Attempt 03 stopped at step 33 when telemetry
 tried to serialize an infinite scaled AMP gradient magnitude into JSON. The
-full-run retry will preserve its own results in attempt 04.
+subsequent training run recorded AMP skips and completed its epoch. These
+preserved failures explain the retries; they are not evidence of successful
+adapter verification.
 
 ## Run on Colab
 
-Open [the notebook on Colab](https://colab.research.google.com/github/Huzyefahwasim/Soup/blob/main/notebooks/run_colab.ipynb),
-select **T4 GPU** under **Runtime → Change runtime type**, and run the cells in
-order. The notebook clones the public repository into `/content/soup-assignment`.
-Set `REPO_REF` to the recorded commit SHA for an exact source replay. The default
-`main` resolves the latest submission and records the commit it used.
+1. Open [the notebook on Colab](https://colab.research.google.com/github/Huzyefahwasim/Soup/blob/main/notebooks/run_colab.ipynb).
+2. Under **Runtime → Change runtime type**, select **Runtime version 2026.07**
+   and **T4 GPU**. The measured run used this Python 3.12 runtime; the latest
+   Python 3.13 runtime does not meet Soup's Python requirement.
+3. Set `REPO_REF` to
+   `b21a3499290c6317baeaf41da6fb0406fe85fab4` to include the tested verifier fix,
+   then run the cells in order. The notebook clones the public repository into
+   `/content/soup-assignment` and records the resolved commit. Its default
+   `main` selects the latest submission instead of freezing a source revision.
 
 The setup installs [requirements-colab.txt](requirements-colab.txt), verifies
 the four core package pins, records `pip freeze`, `pip check`, CUDA/GPU details,

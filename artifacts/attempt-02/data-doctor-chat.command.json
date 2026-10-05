@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "soup_cli",
+    "data",
+    "doctor",
+    "data/doctor_chat.jsonl",
+    "--format",
+    "chatml",
+    "--model",
+    "Qwen/Qwen2.5-0.5B-Instruct",
+    "--max-length",
+    "512",
+    "--show-mask",
+    "2",
+    "--train-on-eot",
+    "--output",
+    "artifacts/attempt-02/data-doctor.json"
+  ],
+  "started_utc": "2026-10-04T22:56:27.670393Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T22:56:39.412034Z"
+}

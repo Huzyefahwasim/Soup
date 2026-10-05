@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "git",
+    "-C",
+    "/content/submitted-source",
+    "checkout",
+    "--detach",
+    "55bf7f4c500157a4d921cf6d9818cb3947a8f542"
+  ],
+  "started_utc": "2026-10-04T23:11:29.917277Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T23:11:29.930248Z"
+}

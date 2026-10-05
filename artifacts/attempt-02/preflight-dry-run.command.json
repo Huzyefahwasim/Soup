@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "soup_cli",
+    "train",
+    "--config",
+    "configs/soup.yaml",
+    "--dry-run"
+  ],
+  "started_utc": "2026-10-04T22:56:39.412940Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T22:56:42.850546Z"
+}

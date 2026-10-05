@@ -1,0 +1,120 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-04T23:27:59.750250Z",
+  "adapter": "artifacts/attempt-04/adapter",
+  "model_attention_implementation": "sdpa",
+  "parameter_dtypes": [
+    "torch.float16",
+    "torch.float32"
+  ],
+  "task_accuracy": 0.5,
+  "task_total": 8,
+  "task_correct": 4,
+  "task_category_scores": {
+    "mock_support_policy": {
+      "total": 3,
+      "correct": 2,
+      "accuracy": 0.6666666666666666
+    },
+    "russian_arithmetic": {
+      "total": 3,
+      "correct": 2,
+      "accuracy": 0.6666666666666666
+    },
+    "russian_general": {
+      "total": 2,
+      "correct": 0,
+      "accuracy": 0.0
+    }
+  },
+  "task_results": [
+    {
+      "prompt": "Ответьте только числом: сколько будет 17 + 8?",
+      "expected": "25",
+      "category": "russian_arithmetic",
+      "scoring": "exact",
+      "output": "25",
+      "score": 1.0,
+      "matched": true
+    },
+    {
+      "prompt": "Ответьте только числом: сколько будет 9 * 6?",
+      "expected": "54",
+      "category": "russian_arithmetic",
+      "scoring": "exact",
+      "output": "54",
+      "score": 1.0,
+      "matched": true
+    },
+    {
+      "prompt": "Ответьте только числом: сколько будет 80 - 37?",
+      "expected": "43",
+      "category": "russian_arithmetic",
+      "scoring": "exact",
+      "output": "14",
+      "score": 0.0,
+      "matched": false
+    },
+    {
+      "prompt": "Ответьте только одним словом: какой город является столицей Франции?",
+      "expected": "Париж",
+      "category": "russian_general",
+      "scoring": "contains",
+      "output": "巴黎",
+      "score": 0.0,
+      "matched": false
+    },
+    {
+      "prompt": "Ответьте только одним словом: как называется спутник Земли?",
+      "expected": "Луна",
+      "category": "russian_general",
+      "scoring": "contains",
+      "output": "Марс",
+      "score": 0.0,
+      "matched": false
+    },
+    {
+      "prompt": "Правило поддержки: возврат доступен в течение 14 дней после покупки. Клиент купил товар 10 дней назад и спрашивает, возможен ли возврат. Ответьте только ДА или НЕТ.",
+      "expected": "ДА",
+      "category": "mock_support_policy",
+      "scoring": "exact",
+      "output": "НЕТ",
+      "score": 0.0,
+      "matched": false
+    },
+    {
+      "prompt": "Правило поддержки: возврат доступен в течение 14 дней после покупки. Клиент купил товар 20 дней назад и спрашивает, возможен ли возврат. Ответьте только ДА или НЕТ.",
+      "expected": "НЕТ",
+      "category": "mock_support_policy",
+      "scoring": "exact",
+      "output": "НЕТ",
+      "score": 1.0,
+      "matched": true
+    },
+    {
+      "prompt": "Правило поддержки: для проверки заказа нужен номер заказа. Клиент пишет: заказ не пришел, помогите. Какую информацию нужно запросить? Ответьте коротко.",
+      "expected": "номер заказа",
+      "category": "mock_support_policy",
+      "scoring": "contains",
+      "output": "Чтобы помочь вам, мне нужно знать следующие детали:\n\n1. Номер заказа: Это уникальный номер, который вы указываете клиенту.\n2. Дата и время: Когда заказ был отправлен.\n3. Содержимое заказа: Что именно вы хотите доставить (например, товары, услуги).\n\nПожалуйста, предоставьте эти данные, чтобы я мог помочь вам с проверкой заказа.",
+      "score": 1.0,
+      "matched": true
+    }
+  ],
+  "benchmarks": {
+    "mini_mmlu": 0.6538461538461539,
+    "mini_common_sense": 0.875,
+    "mini_instruction": 0.875,
+    "mini_arithmetic": 1.0,
+    "mini_tool_call": 0.9,
+    "mini_format_json": 1.0,
+    "mini_safety": 0.925,
+    "mini_over_refusal": 0.975
+  },
+  "generation_calls": 278,
+  "generation_errors": 0,
+  "peak_allocated_bytes": 1024592384,
+  "peak_reserved_bytes": 1075838976,
+  "finished_utc": "2026-10-04T23:41:42.876176Z",
+  "duration_seconds": 823.1253793370006
+}

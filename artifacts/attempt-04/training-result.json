@@ -1,0 +1,8 @@
+{
+  "initial_loss": 0.6931471824645996,
+  "final_loss": 0.6839635372161865,
+  "duration": "2m",
+  "duration_secs": 167.384028673172,
+  "output_dir": "/content/submitted-source/artifacts/attempt-04/adapter",
+  "total_steps": 100
+}

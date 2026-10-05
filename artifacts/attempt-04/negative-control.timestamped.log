@@ -1,0 +1,14 @@
+[2026-10-04T23:16:36.664559Z] Traceback (most recent call last):
+[2026-10-04T23:16:36.664882Z]   File "/content/submitted-source/scripts/verify_adapter.py", line 205, in <module>
+[2026-10-04T23:16:36.664923Z]     raise SystemExit(main())
+[2026-10-04T23:16:36.664939Z]                      ^^^^^^
+[2026-10-04T23:16:36.664951Z]   File "/content/submitted-source/scripts/verify_adapter.py", line 194, in main
+[2026-10-04T23:16:36.664964Z]     json.loads(Path(args.metrics_before).read_text()),
+[2026-10-04T23:16:36.664976Z]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T23:16:36.664987Z]   File "/usr/lib/python3.12/pathlib.py", line 1027, in read_text
+[2026-10-04T23:16:36.665726Z]     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[2026-10-04T23:16:36.665761Z]          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T23:16:36.665777Z]   File "/usr/lib/python3.12/pathlib.py", line 1013, in open
+[2026-10-04T23:16:36.666835Z]     return io.open(self, mode, buffering, encoding, errors, newline)
+[2026-10-04T23:16:36.666867Z]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-10-04T23:16:36.666882Z] FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/attempt-04/baseline.json'

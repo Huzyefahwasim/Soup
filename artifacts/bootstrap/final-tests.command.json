@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "started_utc": "2026-10-04T23:11:33.706890Z",
+  "returncode": 0,
+  "finished_utc": "2026-10-04T23:11:36.369045Z"
+}

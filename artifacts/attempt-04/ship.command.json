@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-m",
+    "soup_cli",
+    "ship",
+    "--evidence",
+    "artifacts/attempt-04/ship-input-fp16.json",
+    "--config",
+    "artifacts/attempt-04/resolved-soup.yaml",
+    "--output",
+    "artifacts/attempt-04/ship-verdict.json",
+    "--emit-evidence",
+    "artifacts/attempt-04/ship-evidence.json"
+  ],
+  "started_utc": "2026-10-04T23:41:44.534834Z",
+  "returncode": 2,
+  "finished_utc": "2026-10-04T23:41:45.713361Z"
+}

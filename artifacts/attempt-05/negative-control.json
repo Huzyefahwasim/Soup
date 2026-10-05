@@ -1,0 +1,21 @@
+{
+  "verdict": "DON'T SHIP",
+  "checks": {
+    "matching_tensor_layout": true,
+    "finite_tensors": true,
+    "updated_lora_b": false,
+    "matched_data": true,
+    "portable_reload": false,
+    "active_adapter": false,
+    "base_control": false,
+    "heldout_improvement": false,
+    "matching_adapter_config": true
+  },
+  "n_test": 50,
+  "mean_margin_gain": null,
+  "paired_bootstrap_95_lower": null,
+  "min_margin_gain": 0.05,
+  "adapter_probe_delta": 0.0,
+  "repeat_noise": 0.0,
+  "scope": "adapter verification; combine with streaming parity and run evidence"
+}

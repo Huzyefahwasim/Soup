@@ -1,0 +1,46 @@
+{
+  "started_utc": "2026-10-04T23:25:20.822614Z",
+  "python_executable": "/usr/bin/python3",
+  "script_sha256": {
+    "scripts/check_streaming.py": "b385c2b6428be805306a1538c475c1a1ae3bb364033978d871bec538bb34be43",
+    "scripts/evaluate_ship.py": "97a50f6e2856d5d42f01c917d713d36ac26154c70497a57e2c61dc851d11bc40",
+    "scripts/memory_budget.py": "792f3623c03d08c7ed02edc0ff6030821f2cccbbc58caaf8155bfa56f23d7793",
+    "scripts/prepare_data.py": "a758655012a75b71d5c71d51030817877ff68d560a54719c3e835578d65c0665",
+    "scripts/recheck_saved.py": "d20527ce748df97b72ef6ce1d06876031a171a194ff2a4231b8bde9b0cff8077",
+    "scripts/run_experiment.py": "6009e83c6aa9a1eb17b28fab2f095e3f7232aeb7918af13c8197e3fa3a5c2c93",
+    "scripts/train_dpo.py": "c45981565e92cdbe81e8cf0e4aa88dc4f87153958f6c862061b29b7534b644aa",
+    "scripts/verify_adapter.py": "dc3ef75aa50d78929bab28cdf2e228df681b0531c8c3b050ebde02752a604e61"
+  },
+  "input_sha256": {
+    "/content/verification-source/configs/soup.yaml": "bc024a6922980cf4a78439e497db7cdde0179cb5ac650821678e78783d2e2304",
+    "/content/verification-source/data/doctor_chat.jsonl": "c108d2fa11e742173fc3ec3047547ff16fa72afb1c45f170ed2afe0a0cda31e8",
+    "/content/verification-source/data/task_eval.jsonl": "cc44e895e89b615bf03403fc21cb2edbe43f80979d1b7e450084e48e594ddde0",
+    "/content/verification-source/data/test.jsonl": "62bc5cd59dd86e3d426926a6a010667c089bfdffab37f30ac1f589cabc402f7e",
+    "/content/verification-source/data/train.jsonl": "15453a88c05eac4761cce673d979af4363392e9e7978240612985013b84c0b79",
+    "/content/verification-source/data/validation.jsonl": "2b704f98217a743aed594679ae8488b5adb83f3e823a1e627db846983c6db090"
+  },
+  "training_run": "/content/submitted-source/artifacts/attempt-04",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "adapter_sha256": "1156d6155c854b33fe3f1343630574963dd612c96d7b876da712e312aaed999d",
+  "training_source_provenance": {
+    "started_utc": "2026-10-04T23:11:36.466577Z",
+    "python_executable": "/usr/bin/python3",
+    "script_sha256": {
+      "scripts/check_streaming.py": "b385c2b6428be805306a1538c475c1a1ae3bb364033978d871bec538bb34be43",
+      "scripts/evaluate_ship.py": "97a50f6e2856d5d42f01c917d713d36ac26154c70497a57e2c61dc851d11bc40",
+      "scripts/memory_budget.py": "792f3623c03d08c7ed02edc0ff6030821f2cccbbc58caaf8155bfa56f23d7793",
+      "scripts/prepare_data.py": "a758655012a75b71d5c71d51030817877ff68d560a54719c3e835578d65c0665",
+      "scripts/run_experiment.py": "6009e83c6aa9a1eb17b28fab2f095e3f7232aeb7918af13c8197e3fa3a5c2c93",
+      "scripts/train_dpo.py": "c45981565e92cdbe81e8cf0e4aa88dc4f87153958f6c862061b29b7534b644aa",
+      "scripts/verify_adapter.py": "004cf2534d1478777ce1784b319b5c5fc94e0391d72a437688497c170700b50f"
+    },
+    "input_sha256": {
+      "/content/submitted-source/configs/soup.yaml": "bc024a6922980cf4a78439e497db7cdde0179cb5ac650821678e78783d2e2304",
+      "/content/submitted-source/data/doctor_chat.jsonl": "c108d2fa11e742173fc3ec3047547ff16fa72afb1c45f170ed2afe0a0cda31e8",
+      "/content/submitted-source/data/task_eval.jsonl": "cc44e895e89b615bf03403fc21cb2edbe43f80979d1b7e450084e48e594ddde0",
+      "/content/submitted-source/data/test.jsonl": "62bc5cd59dd86e3d426926a6a010667c089bfdffab37f30ac1f589cabc402f7e",
+      "/content/submitted-source/data/train.jsonl": "15453a88c05eac4761cce673d979af4363392e9e7978240612985013b84c0b79",
+      "/content/submitted-source/data/validation.jsonl": "2b704f98217a743aed594679ae8488b5adb83f3e823a1e627db846983c6db090"
+    }
+  }
+}

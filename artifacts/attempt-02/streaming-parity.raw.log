@@ -1,0 +1,53 @@
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 401.29it/s]
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/50 [00:00<?, ?it/s]Loading weights: 100%|██████████| 50/50 [00:00<00:00, 5161.08it/s]
+/content/soup-assignment/scripts/check_streaming.py:120: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  result["loss_difference"] = abs(float(streamed_loss) - float(resident_loss))
+{
+  "forward_pass": true,
+  "backward_pass": true,
+  "forward_bit_exact": true,
+  "forward_max_abs": 0.0,
+  "gradient_relative_l2": 0.0,
+  "gradient_cosine": 1.0000000000000002,
+  "gradient_tensors": 16,
+  "atol": 0.0002,
+  "rtol": 0.002,
+  "reference_pass": true,
+  "policy_reference_logprob_gap": 0.08251380920410156,
+  "all_expected_gradients": true,
+  "loss_difference": 0.0,
+  "base_frozen": true,
+  "decoder_base_on_meta": true,
+  "optimizer_changed_parameters": true,
+  "updated_parameters_finite": true,
+  "negative_control_rejected": true,
+  "scope": "random four-layer Qwen2; this does not prove checkpoint-scale or NF4 parity",
+  "attention_implementation": "sdpa",
+  "dtype": "float16",
+  "device": "cuda",
+  "runtime": {
+    "n_layers": 4,
+    "buffers": 2,
+    "buffer_bytes": 148480,
+    "large_buffer_bytes": 0,
+    "store_bytes": 296960,
+    "pinned": true,
+    "tier": "ram",
+    "disk_bytes": 0,
+    "layer_loads": 10,
+    "large_loads": 0,
+    "device": "cuda",
+    "total_params": 164928
+  },
+  "torch": "2.11.0+cu128",
+  "adapter_dtypes": [
+    "torch.float32"
+  ],
+  "gpu": "Tesla T4",
+  "peak_allocated": 20030464,
+  "peak_reserved": 25165824,
+  "pass": true
+}

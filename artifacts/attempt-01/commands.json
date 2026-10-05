@@ -1,0 +1,152 @@
+[
+  {
+    "name": "nvidia-smi-before",
+    "argv": [
+      "nvidia-smi"
+    ],
+    "started_utc": "2026-10-04T22:37:20.553765Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T22:37:20.745490Z"
+  },
+  {
+    "name": "environment",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "pip",
+      "freeze"
+    ],
+    "started_utc": "2026-10-04T22:37:20.745937Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T22:37:23.798050Z"
+  },
+  {
+    "name": "soup-version",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "soup_cli",
+      "--version"
+    ],
+    "started_utc": "2026-10-04T22:37:23.798676Z",
+    "returncode": 2,
+    "finished_utc": "2026-10-04T22:37:24.890565Z"
+  },
+  {
+    "name": "doctor",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "soup_cli",
+      "doctor",
+      "--config",
+      "configs/soup.yaml"
+    ],
+    "started_utc": "2026-10-04T22:37:24.891121Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T22:38:19.843725Z"
+  },
+  {
+    "name": "dpo-doctor-refusal",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "soup_cli",
+      "data",
+      "doctor",
+      "data/train.jsonl",
+      "--format",
+      "dpo",
+      "--model",
+      "Qwen/Qwen2.5-0.5B-Instruct"
+    ],
+    "started_utc": "2026-10-04T22:38:19.844338Z",
+    "returncode": 2,
+    "finished_utc": "2026-10-04T22:38:20.893252Z"
+  },
+  {
+    "name": "data-lint",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "soup_cli",
+      "data",
+      "lint",
+      "data/train.jsonl",
+      "--format",
+      "dpo",
+      "--sample",
+      "400",
+      "--output",
+      "artifacts/attempt-01/data-lint.json"
+    ],
+    "started_utc": "2026-10-04T22:38:20.894193Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T22:38:21.859730Z"
+  },
+  {
+    "name": "data-doctor-chat",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "soup_cli",
+      "data",
+      "doctor",
+      "data/doctor_chat.jsonl",
+      "--format",
+      "chatml",
+      "--model",
+      "Qwen/Qwen2.5-0.5B-Instruct",
+      "--max-length",
+      "512",
+      "--show-mask",
+      "2",
+      "--train-on-eot",
+      "--output",
+      "artifacts/attempt-01/data-doctor.json"
+    ],
+    "started_utc": "2026-10-04T22:38:21.860202Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T22:38:34.428707Z"
+  },
+  {
+    "name": "preflight-dry-run",
+    "argv": [
+      "/usr/bin/python3",
+      "-m",
+      "soup_cli",
+      "train",
+      "--config",
+      "configs/soup.yaml",
+      "--dry-run"
+    ],
+    "started_utc": "2026-10-04T22:38:34.429563Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T22:38:37.827079Z"
+  },
+  {
+    "name": "streaming-parity",
+    "argv": [
+      "/usr/bin/python3",
+      "scripts/check_streaming.py",
+      "--out",
+      "artifacts/attempt-01/streaming-parity.json",
+      "--device",
+      "cuda",
+      "--dtype",
+      "float16"
+    ],
+    "started_utc": "2026-10-04T22:38:37.827855Z",
+    "returncode": 1,
+    "finished_utc": "2026-10-04T22:38:50.054281Z"
+  },
+  {
+    "name": "nvidia-smi-after",
+    "argv": [
+      "nvidia-smi"
+    ],
+    "started_utc": "2026-10-04T22:38:50.055248Z",
+    "returncode": 0,
+    "finished_utc": "2026-10-04T22:38:50.186615Z"
+  }
+]
